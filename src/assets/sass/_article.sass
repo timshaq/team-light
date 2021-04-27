@@ -1,0 +1,75 @@
+.article
+	&__fix-box
+		@media(min-width:$xl)
+			display: flex
+			justify-content: space-between
+	&__content
+		@media(min-width:$xl)
+			width: 770px
+	&__title
+		margin-bottom: 20px
+		@media(min-width:$md)
+			margin-bottom: 30px
+	&__author
+		display: flex
+		flex-direction: column
+		margin-top: 30px
+		@media(min-width:$md)
+			margin-top: 40px
+		& span
+			color: var(--black60)
+			font-size: 14px
+			@media(min-width:$md)
+				line-height: 160%
+				font-size: 16px
+				line-height: 160%
+	&__author-name
+		font-weight: 600
+		font-size: 16px
+		margin-top: 7px
+		@media(min-width:$md)
+			line-height: 20px
+			font-size: 18px
+			line-height: 22px
+	&__all-articles
+		width: 100%
+		margin-top: 30px
+		@media(min-width:$md)
+			width: 216px
+			margin-top: 60px
+		@media(min-width:$xl)
+			width: 170px
+	&__aside
+		display: none
+		@media(min-width:$xl)
+			display: block
+			width: 270px
+			& .article__aside-title
+				font-weight: 800
+				font-size: 22px
+				line-height: 145%
+				margin-bottom: 30px
+			& .feed-card
+				width: 100%
+			& .feed-card__ph-box
+				height: 200px
+			& .feed-card__title
+				font-size: 16px
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 2
+				line-height: 26px
+				max-height: 52
+
+			& .feed-card__btn
+				font-size: 14px
+				line-height: 145%
+.page-props
+	&__title
+
+.page-title
+
+.editor-content
+

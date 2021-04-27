@@ -11,6 +11,7 @@ $xs: 576px
 	--black15: rgba(51,51,51,.15)
 	--black40: rgba(51,51,51,.4)
 	--black50: rgba(51,51,51,.5)
+	--black60: rgba(51,51,51,.6)
 	--red: rgba(238,85,75,1)
 	--green: rgba(132,183,57,1)
 	--purple: rgba(108,57,183,1)
@@ -39,23 +40,31 @@ $xs: 576px
 	@media(min-width:$md)
 		margin-bottom: 20px
 .breadscrumb-item
-	opacity: .5
+	display: flex
+	align-items: center
 	&:not(:first-child)
 		margin-left: 7px
 		position: relative
 		&:before
 			content: '/'
-			margin-right: 2px
+			margin-right: 7px
 			font-size: 12px
 			line-height: 15px
+			color: var(--black40)
 	& a
+		display: inline-block
 		font-size: 12px
 		line-height: 15px
-		white-space: nowrap
 		color: var(--black40)
+		white-space: nowrap
+		overflow: hidden
+		max-width: 133px
+		text-overflow: ellipsis
 	&:last-child
 		& a
 			font-weight: 500
+			color: var(--black)
+		&:before
 			color: var(--black)
 .page-props
 	margin-bottom: 15px
@@ -90,6 +99,9 @@ $xs: 576px
 			width: 170px
 
 .btn-green
+	display: flex
+	justify-content: center
+	align-items: center
 	font-weight: 700
 	font-size: 14px
 	line-height: 150%
@@ -101,3 +113,27 @@ $xs: 576px
 	padding-bottom: 13px
 	padding-right: 32px
 	padding-left: 32px
+
+.editor-content
+	font-size: 14px
+	line-height: 160%
+	@media(min-width:$md)
+		font-weight: 300
+		font-size: 16px
+		line-height: 160%
+	& p
+		margin: 20px 0
+		@media(min-width:$md)
+			margin: 25px 0
+	& h2
+		font-weight: 600
+		font-size: 16px
+		line-height: 20px
+		margin: 15px 0
+		@media(min-width:$md)
+			margin: 20px 0
+		@media(min-width:$md)
+			font-size: 18px
+			line-height: 22px
+	& img
+		border-radius: 1%
