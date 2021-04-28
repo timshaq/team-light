@@ -251,6 +251,22 @@
 /******/
 {
   /***/
+  "./src/assets/js/blogLineFeed.js":
+  /*!***************************************!*\
+    !*** ./src/assets/js/blogLineFeed.js ***!
+    \***************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst blogLineFeed = document.getElementById('blogLineFeed');\r\n\tif(!blogLineFeed) return;\r\n\r\n\tconst newsBlogLineTab = document.getElementById('newsBlogLineTab');\r\n\tconst articlesBlogLineTab = document.getElementById('articlesBlogLineTab');\r\n\tconst reviewsBlogLineTab = document.getElementById('reviewsBlogLineTab');\r\n\tconst btnsList = [newsBlogLineTab,articlesBlogLineTab,reviewsBlogLineTab];\r\n\r\n\tconst feedsNL = blogLineFeed.querySelectorAll('.feed__list');\r\n\tconst feedsList = Array.prototype.slice.call(feedsNL);\r\n\r\n\tfunction feedsRemoveActiveClass() {\r\n\t\tfeedsList.forEach( feed => feed.classList.remove('active') )\r\n\t}\r\n\tfunction feedAddActiveClass(feed) {\r\n\t\tfeed.classList.add('active')\r\n\t}\r\n\r\n\tfunction btnsRemoveActiveClass() {\r\n\t\tbtnsList.forEach( feed => feed.classList.remove('active') )\r\n\t}\r\n\tfunction btnAddActiveClass(feed) {\r\n\t\tfeed.classList.add('active')\r\n\t}\r\n\r\n\tbtnsList.forEach((btn, index) => {\r\n\t\tbtn.addEventListener('click', function() {\r\n\t\t\tlet curFeed = feedsList[index];\r\n\t\t\tif( !curFeed.classList.contains('active') ) {\r\n\t\t\t\tbtnsRemoveActiveClass();\r\n\t\t\t\tbtnAddActiveClass(btn);\r\n\r\n\t\t\t\tfeedsRemoveActiveClass();\r\n\t\t\t\tfeedAddActiveClass(curFeed)\r\n\t\t\t}\r\n\t\t})\r\n\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/blogLineFeed.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/script.js":
   /*!*********************************!*\
     !*** ./src/assets/js/script.js ***!
@@ -262,7 +278,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _yamap_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./yamap.js */ \"./src/assets/js/yamap.js\");\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_yamap_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _yamap_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./yamap.js */ \"./src/assets/js/yamap.js\");\n/* harmony import */ var _blogLineFeed_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blogLineFeed.js */ \"./src/assets/js/blogLineFeed.js\");\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_yamap_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_blogLineFeed_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -300,15 +316,15 @@
 
   /***/
   0:
-  /*!*******************************************************************************************!*\
-    !*** multi ./src/assets/js/script.js ./src/assets/js/sliders.js ./src/assets/js/yamap.js ***!
-    \*******************************************************************************************/
+  /*!***************************************************************************************************************************!*\
+    !*** multi ./src/assets/js/blogLineFeed.js ./src/assets/js/script.js ./src/assets/js/sliders.js ./src/assets/js/yamap.js ***!
+    \***************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\yamap.js */\"./src/assets/js/yamap.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/script.js_./src/assets/js/sliders.js_./src/assets/js/yamap.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\blogLineFeed.js */\"./src/assets/js/blogLineFeed.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\yamap.js */\"./src/assets/js/yamap.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/blogLineFeed.js_./src/assets/js/script.js_./src/assets/js/sliders.js_./src/assets/js/yamap.js?");
     /***/
   }
   /******/

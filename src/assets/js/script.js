@@ -2,6 +2,7 @@
 
 import sliders from './sliders.js';
 import yamap from './yamap.js';
+import blogLineFeed from './blogLineFeed.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -9,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	sliders();
 	yamap();
+	blogLineFeed();
 
 });
