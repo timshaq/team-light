@@ -128,13 +128,29 @@
 		font-size: 14px
 		line-height: 160%
 		margin-top: 7px
+		overflow: hidden
+		text-overflow: ellipsis
+		display: -webkit-box
+		-webkit-box-orient: vertical
+		-webkit-line-clamp: 2
+		line-height: 22px
+		max-height: 44px
 		@media(min-width:$md)
 			font-size: 16px
 			margin-top: 10px
 			font-weight: 600
+			line-height: 26px
+			max-height: 52px
 		@media(min-width:$xl)
 			margin-top: 15px
 			font-weight: 700
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			-webkit-line-clamp: 2
+			line-height: 26px
+			max-height: 52px
 	&__btn
 		font-weight: 600
 		font-size: 14px
@@ -168,6 +184,8 @@
 				color: var(--white)
 				font-size: 18px
 				font-weight: 700
+				line-height: 29px
+				max-height: 58px
 			& .feed-card__btn
 				display: none
 		@media(min-width:$xl)

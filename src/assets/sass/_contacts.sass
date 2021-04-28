@@ -1,0 +1,205 @@
+.contacts
+	@media(min-width:$xl)
+		display: flex
+		width: 1170px
+		margin-right: auto
+		margin-left: auto
+		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+		border-radius: 10px
+		overflow: hidden
+	&__map
+		background-color: var(--green)
+		height: 445px
+		position: relative
+		@media(min-width:$md)
+			height: 430px
+		@media(min-width:$xl)
+			height: 500px
+			width: 770px
+			order: 2
+	& .map-label
+		width: 290px
+		padding: 15px
+		display: flex
+		align-items: center
+		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+		background-color: var(--white)
+		border-radius: 10px
+		position: absolute
+		left: 50%
+		bottom: 90px
+		transform: translate(-50%,0)
+		@media(min-width:$md)
+			bottom: auto
+			top: 30px
+			left: 30px
+			width: 385px
+			transform: translate(0,0)
+		@media(min-width:$xl)
+			top: auto
+			left: 15px
+			bottom: 15px
+		&__icon-box
+			width: 30px
+			height: 30px
+		&__icon
+			width: 100%
+			height: 100%
+			object-fit: contain
+		&__body
+			margin-left: 15px
+		&__subtitle
+			font-weight: 600
+			font-size: 12px
+			line-height: 145%
+			color: var(--green)
+			display: block
+		&__title
+			font-weight: 500
+			font-size: 14px
+			line-height: 145%
+			margin-top: 5px
+
+	&__info
+		width: 290px
+		border-radius: 10px
+		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+		margin-right: auto
+		margin-left: auto
+		padding: 30px 40px
+		top: -75px
+		position: relative
+		background-color: var(--white)
+		@media(min-width:$md)
+			top: -50px
+			width: 708px
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			padding: 30px 30px 35px
+		@media(min-width:$xl)
+			position: static
+			top: auto
+			width: 400px
+			margin: 0
+			box-shadow: none
+			padding: 0 35px
+			border-radius: 0
+			height: 500px
+			padding-top: 25px
+			padding-bottom: 30px
+	&__info-header
+		display: flex
+		justify-content: center
+		width: 100%
+		margin-bottom: 30px
+		@media(min-width:$xl)
+			margin-bottom: 25px
+	&__info-logo
+		width: 150px
+		height: 40px
+		object-fit: cover
+	&__info-item
+
+.contact-item
+	@media(min-width:$md)
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		width: 310px
+		margin-right: auto
+		margin-left: auto
+		&:not(:last-child)
+			margin-bottom: 30px
+	@media(min-width:$xl)
+		justify-content: center
+		margin-right: 0
+		margin-left: 0
+		width: 100%
+	& + .contact-item
+		margin-top: 30px
+		@media(min-width:$md)
+			margin-top: 0
+	&.center
+		& .contact-item__contact
+			@media(min-width:$md)
+				width: 210px
+	&__header
+		display: flex
+		align-items: center
+		justify-content: center
+		@media(min-width:$md)
+			width: 100%
+	&__icon
+		width: 18px
+		height: 18px
+		object-fit: contain
+		object-position: center center
+	&__title
+		font-weight: 700
+		font-size: 14px
+		line-height: 145%
+		color: var(--green)
+		margin-left: 10px
+	&__contact
+		display: block
+		margin-top: 15px
+		& .doc-icon
+			width: 30px
+			height: 30px
+			object-fit: cover
+		& .download-icon
+			width: 20px
+			height: 20px
+			object-fit: cover
+		@media(min-width:$md)
+			width: 50%
+		@media(min-width:$xl)
+			width: 155px
+			& + .contact-item__contact
+				margin-left: 20px
+	&__contact-label
+		padding: 10px
+		border-radius: 5px
+		background-color: var(--gray-light)
+		&.flex-center
+			display: flex
+			justify-content: center
+			align-items: center
+			& .contact-item__contact-value
+				margin: 0 10px
+	&__contact-title
+		font-weight: 500
+		font-size: 10px
+		line-height: 190%
+		color: var(--black50)
+		@media(min-width:$md)
+			width: 100%
+			text-align: center
+		@media(min-width:$xl)
+			text-align: left
+	&__contact-value
+		font-weight: 600
+		font-size: 14px
+		line-height: 145%
+		@media(min-width:$md)
+			width: 100%
+			text-align: center
+		@media(min-width:$xl)
+			text-align: left
+	&__contact-note
+		font-weight: 500
+		font-size: 10px
+		line-height: 145%
+		color: var(--green)
+		margin-top: 5px
+		padding: 0 10px
+		display: block
+		@media(min-width:$md)
+			width: 85px
+			text-align: center
+			margin-right: auto
+			margin-left: auto
+			padding: 0
+		@media(min-width:$xl)
+			width: 100%
