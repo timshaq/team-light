@@ -75,86 +75,134 @@
 			TeamLight – выбор покупателей!
 		</h2>
 
-		<ul class="bestest__list">
-			
-			<li class="bestest__li achievement">
-				<div class="achievement__header">
-					<div class="achievement__icon-box">
-						<img src="assets/img/achievement__01.svg" alt="" class="achievement__icon">
+		<div class="swiper-container" id="bestestSlider">
+			<ul class="bestest__list swiper-wrapper">
+				
+				<li class="bestest__li achievement swiper-slide">
+					<div class="achievement__header">
+						<div class="achievement__icon-box">
+							<img src="assets/img/achievement__01.svg" alt="" class="achievement__icon">
+						</div>
+						<div class="achievement__num">
+							01
+						</div>
 					</div>
-					<div class="achievement__num">
-						01
+					<div class="achievement__body">
+						<h3 class="achievement__title">
+							Гарантия на весь товар
+						</h3>
+						<p class="achievement__p">
+							Мы уверены в качестве своего товара
+						</p>
 					</div>
-				</div>
-				<div class="achievement__body">
-					<h3 class="achievement__title">
-						Гарантия на весь товар
-					</h3>
-					<p class="achievement__p">
-						Мы уверены в качестве своего товара
-					</p>
-				</div>
-			</li>
-			
-			<li class="bestest__li achievement">
-				<div class="achievement__header">
-					<div class="achievement__icon-box">
-						<img src="assets/img/achievement__02.svg" alt="" class="achievement__icon">
+				</li>
+				
+				<li class="bestest__li achievement swiper-slide">
+					<div class="achievement__header">
+						<div class="achievement__icon-box">
+							<img src="assets/img/achievement__02.svg" alt="" class="achievement__icon">
+						</div>
+						<div class="achievement__num">
+							02
+						</div>
 					</div>
-					<div class="achievement__num">
-						02
+					<div class="achievement__body">
+						<h3 class="achievement__title">
+							14 дней на возврат
+						</h3>
+						<p class="achievement__p">
+							Вы всегда можете вернуть товар
+						</p>
 					</div>
-				</div>
-				<div class="achievement__body">
-					<h3 class="achievement__title">
-						14 дней на возврат
-					</h3>
-					<p class="achievement__p">
-						Вы всегда можете вернуть товар
-					</p>
-				</div>
-			</li>
-			
-			<li class="bestest__li achievement">
-				<div class="achievement__header">
-					<div class="achievement__icon-box">
-						<img src="assets/img/achievement__03.svg" alt="" class="achievement__icon">
+				</li>
+				
+				<li class="bestest__li achievement swiper-slide">
+					<div class="achievement__header">
+						<div class="achievement__icon-box">
+							<img src="assets/img/achievement__03.svg" alt="" class="achievement__icon">
+						</div>
+						<div class="achievement__num">
+							03
+						</div>
 					</div>
-					<div class="achievement__num">
-						03
+					<div class="achievement__body">
+						<h3 class="achievement__title">
+							Доставка по всей России
+						</h3>
+						<p class="achievement__p">
+							Доставим в любой город без предоплаты
+						</p>
 					</div>
-				</div>
-				<div class="achievement__body">
-					<h3 class="achievement__title">
-						Доставка по всей России
-					</h3>
-					<p class="achievement__p">
-						Доставим в любой город без предоплаты
-					</p>
-				</div>
-			</li>
-			
-			<li class="bestest__li achievement">
-				<div class="achievement__header">
-					<div class="achievement__icon-box">
-						<img src="assets/img/achievement__04.svg" alt="" class="achievement__icon">
+				</li>
+				
+				<li class="bestest__li achievement swiper-slide">
+					<div class="achievement__header">
+						<div class="achievement__icon-box">
+							<img src="assets/img/achievement__04.svg" alt="" class="achievement__icon">
+						</div>
+						<div class="achievement__num">
+							04
+						</div>
 					</div>
-					<div class="achievement__num">
-						04
+					<div class="achievement__body">
+						<h3 class="achievement__title">
+							Большой ассортимент
+						</h3>
+						<p class="achievement__p">
+							Подберите себе свет на любой вкус!
+						</p>
 					</div>
-				</div>
-				<div class="achievement__body">
-					<h3 class="achievement__title">
-						Большой ассортимент
-					</h3>
-					<p class="achievement__p">
-						Подберите себе свет на любой вкус!
-					</p>
-				</div>
-			</li>
+				</li>
 
-		</ul>
+			</ul>
+			<div class="swiper-pagination" id="bestestSliderPagination"></div>
+		</div>
 		
+	</section>
+
+	<section class="reviews">
+		<div class="reviews__header">
+			<h2 class="reviews__title page-title">
+				Отзывы покупателей TeamLight
+			</h2>
+
+			<div class="reviews__slider-btns">
+				<button class="reviews__btn prev" id="prev">
+					<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7 11.5L2 6.5L7 1.5" stroke="#333333" stroke-width="1.5"/>
+					</svg>
+				</button>
+				<button class="reviews__btn next" id="next">
+					<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7 11.5L2 6.5L7 1.5" stroke="#333333" stroke-width="1.5"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="slider">
+			<ul class="reviews__list">
+				<li class="reviews__li review-card">
+					<div class="review-card__ph-box">
+						<img src="" alt="" class="review-card__ph">
+					</div>
+					<div class="review-card__bg-box">
+						<img src="" alt="" class="review-card__bg">
+					</div>
+					<div class="review-card__header">
+						<h3 class="review-card__name">
+							
+						</h3>
+						<time class="review-card__date">
+							
+						</time>
+					</div>
+					<p class="review-card__text">
+						
+					</p>
+				</li>
+			</ul>
+		</div>
 	</section>
 
 	<section class="popular-brands">
