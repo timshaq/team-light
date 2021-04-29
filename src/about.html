@@ -155,52 +155,159 @@
 		</div>
 		
 	</section>
+</div>
 
 	<section class="reviews">
-		<div class="reviews__header">
-			<h2 class="reviews__title page-title">
-				Отзывы покупателей TeamLight
-			</h2>
+		<div class="fix-box">
+			<div class="reviews__header">
+				<h2 class="reviews__title page-title">
+					Отзывы <span class="text-mob-hidden">покупателей TeamLight</span>
+				</h2>
 
-			<div class="reviews__slider-btns">
-				<button class="reviews__btn prev" id="prev">
-					<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M7 11.5L2 6.5L7 1.5" stroke="#333333" stroke-width="1.5"/>
-					</svg>
-				</button>
-				<button class="reviews__btn next" id="next">
-					<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M7 11.5L2 6.5L7 1.5" stroke="#333333" stroke-width="1.5"/>
-					</svg>
-				</button>
+				<div class="reviews__slider-btns">
+					<button class="reviews__btn prev" id="reviewsSliderPrevBtn">
+						<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 11.5L2 6.5L7 1.5" stroke="#333333" stroke-width="1.5"/>
+						</svg>
+					</button>
+					<button class="reviews__btn next" id="reviewsSliderNextBtn">
+						<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 11.5L2 6.5L7 1.5" stroke="#333333" stroke-width="1.5"/>
+						</svg>
+					</button>
+				</div>
 			</div>
-		</div>
 
-		<div class="slider">
-			<ul class="reviews__list">
-				<li class="reviews__li review-card">
-					<div class="review-card__ph-box">
-						<img src="" alt="" class="review-card__ph">
-					</div>
-					<div class="review-card__bg-box">
-						<img src="" alt="" class="review-card__bg">
-					</div>
-					<div class="review-card__header">
-						<h3 class="review-card__name">
-							
-						</h3>
-						<time class="review-card__date">
-							
-						</time>
-					</div>
-					<p class="review-card__text">
-						
-					</p>
-				</li>
-			</ul>
+			<div class="slider swiper-container" id="reviewsSlider">
+				<ul class="reviews__list swiper-wrapper">
+					
+					<li class="reviews__li review-card swiper-slide">
+						<div class="review-card__ph-box">
+							<img src="assets/img/review-card__ph_01.png" alt="" class="review-card__ph">
+						</div>
+						<div class="review-card__bg-box">
+							<img src="assets/img/quotes.svg" alt="" class="review-card__bg">
+						</div>
+						<div class="review-card__header">
+							<h3 class="review-card__name">
+								Виталий Шашков
+							</h3>
+							<time class="review-card__date">
+								21 марта 2021
+							</time>
+						</div>
+						<p class="review-card__text">
+							Feugiat leo consectetur dui aliquam porttitor nibh. Mauris tellus aenean porttitor amet libero. Mi maecenas accumsan ornare enim interdum. Nunc sem in turpis consequat velit. Tellus, adipiscing enim donec sem. Orci fringilla nulla ultrices sed habitasse ut maecenas augue. Malesuada faucibus commodo in tellus, lectus metus massa morbi nulla. 
+						</p>
+					</li>
+					
+					<li class="reviews__li review-card swiper-slide">
+						<div class="review-card__ph-box">
+							<img src="assets/img/review-card__ph_02.png" alt="" class="review-card__ph">
+						</div>
+						<div class="review-card__bg-box">
+							<img src="assets/img/quotes.svg" alt="" class="review-card__bg">
+						</div>
+						<div class="review-card__header">
+							<h3 class="review-card__name">
+								Элла Фокина
+							</h3>
+							<time class="review-card__date">
+								21 марта 2021
+							</time>
+						</div>
+						<p class="review-card__text">
+							Feugiat leo consectetur dui aliquam porttitor nibh. Mauris tellus aenean porttitor amet libero. Mi maecenas accumsan ornare enim interdum. Nunc sem in turpis consequat velit. Tellus, adipiscing enim donec sem. Orci fringilla nulla ultrices sed habitasse ut maecenas augue. Malesuada faucibus commodo in tellus, lectus metus massa morbi nulla. Orci sit quis.
+						</p>
+					</li>
+					
+					<li class="reviews__li review-card swiper-slide">
+						<div class="review-card__ph-box">
+							<img src="assets/img/review-card__ph_01.png" alt="" class="review-card__ph">
+						</div>
+						<div class="review-card__bg-box">
+							<img src="assets/img/quotes.svg" alt="" class="review-card__bg">
+						</div>
+						<div class="review-card__header">
+							<h3 class="review-card__name">
+								Виталий Шашков
+							</h3>
+							<time class="review-card__date">
+								21 марта 2021
+							</time>
+						</div>
+						<p class="review-card__text">
+							Feugiat leo consectetur dui aliquam porttitor nibh. Mauris tellus aenean porttitor amet libero. Mi maecenas accumsan ornare enim interdum. Nunc sem in turpis consequat velit. Tellus, adipiscing enim donec sem. Orci fringilla nulla ultrices sed habitasse ut maecenas augue. Malesuada faucibus commodo in tellus, lectus metus massa morbi nulla. 
+						</p>
+					</li>
+					
+					<li class="reviews__li review-card swiper-slide">
+						<div class="review-card__ph-box">
+							<img src="assets/img/review-card__ph_02.png" alt="" class="review-card__ph">
+						</div>
+						<div class="review-card__bg-box">
+							<img src="assets/img/quotes.svg" alt="" class="review-card__bg">
+						</div>
+						<div class="review-card__header">
+							<h3 class="review-card__name">
+								Элла Фокина
+							</h3>
+							<time class="review-card__date">
+								21 марта 2021
+							</time>
+						</div>
+						<p class="review-card__text">
+							Feugiat leo consectetur dui aliquam porttitor nibh. Mauris tellus aenean porttitor amet libero. Mi maecenas accumsan ornare enim interdum. Nunc sem in turpis consequat velit. Tellus, adipiscing enim donec sem. Orci fringilla nulla ultrices sed habitasse ut maecenas augue. Malesuada faucibus commodo in tellus, lectus metus massa morbi nulla. Orci sit quis.
+						</p>
+					</li>
+					
+					<li class="reviews__li review-card swiper-slide">
+						<div class="review-card__ph-box">
+							<img src="assets/img/review-card__ph_01.png" alt="" class="review-card__ph">
+						</div>
+						<div class="review-card__bg-box">
+							<img src="assets/img/quotes.svg" alt="" class="review-card__bg">
+						</div>
+						<div class="review-card__header">
+							<h3 class="review-card__name">
+								Виталий Шашков
+							</h3>
+							<time class="review-card__date">
+								21 марта 2021
+							</time>
+						</div>
+						<p class="review-card__text">
+							Feugiat leo consectetur dui aliquam porttitor nibh. Mauris tellus aenean porttitor amet libero. Mi maecenas accumsan ornare enim interdum. Nunc sem in turpis consequat velit. Tellus, adipiscing enim donec sem. Orci fringilla nulla ultrices sed habitasse ut maecenas augue. Malesuada faucibus commodo in tellus, lectus metus massa morbi nulla. 
+						</p>
+					</li>
+					
+					<li class="reviews__li review-card swiper-slide">
+						<div class="review-card__ph-box">
+							<img src="assets/img/review-card__ph_02.png" alt="" class="review-card__ph">
+						</div>
+						<div class="review-card__bg-box">
+							<img src="assets/img/quotes.svg" alt="" class="review-card__bg">
+						</div>
+						<div class="review-card__header">
+							<h3 class="review-card__name">
+								Элла Фокина
+							</h3>
+							<time class="review-card__date">
+								21 марта 2021
+							</time>
+						</div>
+						<p class="review-card__text">
+							Feugiat leo consectetur dui aliquam porttitor nibh. Mauris tellus aenean porttitor amet libero. Mi maecenas accumsan ornare enim interdum. Nunc sem in turpis consequat velit. Tellus, adipiscing enim donec sem. Orci fringilla nulla ultrices sed habitasse ut maecenas augue. Malesuada faucibus commodo in tellus, lectus metus massa morbi nulla. Orci sit quis.
+						</p>
+					</li>
+
+				</ul>
+				<div class="swiper-pagination" id="reviewsSliderPagination"></div>
+			</div>
 		</div>
 	</section>
 
+<div class="fix-box">
 	<section class="popular-brands">
 
 		<div class="popular-brands__header">
