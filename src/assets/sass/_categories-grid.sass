@@ -1,0 +1,129 @@
+.categories-grid
+	padding-bottom: 40px
+	margin-top: 30px
+	@media(min-width:$md)
+		padding-bottom: 60px
+	@media(min-width:$xl)
+		margin-top: 60px
+		padding-bottom: 80px
+	&__header
+		@media(min-width:$md)
+			display: flex
+			justify-content: space-between
+			align-items: center
+	&__title
+	&__header-link
+		display: none
+		@media(min-width:$md)
+			display: block
+	&__list
+		display: grid
+		grid-template-columns: repeat(2,1fr)
+		grid-gap: 10px
+		margin-top: 20px
+		@media(min-width:$md)
+			grid-template-columns: repeat(3,1fr)
+			grid-gap: 30px
+			margin-top: 15px
+		@media(min-width:$xl)
+			grid-template-columns: repeat(4,1fr)
+			margin-top: 30px
+	&__li
+		&.grid-start
+			grid-row-start: span 2
+			grid-row-end: 2
+			& .category-card
+				display: flex
+				flex-direction: column
+				& .category-card__ph-box
+					height: 269px
+					@media(min-width:$md)
+						height: 420px
+					@media(min-width:$xl)
+						height: 430px
+						display: flex
+						justify-content: center
+						align-items: center
+						margin-top: auto
+						margin-bottom: auto
+				& .category-card__label
+					margin-top: auto
+				& .category-card__title
+				& .category-card__arrow
+		&.tab-card
+			display: none
+			@media(min-width:$md)
+				display: block
+				& .category-card
+					display: flex
+					flex-direction: column
+					align-items: center
+				& .category-card__ph-box
+					width: 98px
+					height: 98px
+					margin-top: auto
+				& .category-card__subtitle
+					margin-bottom: auto
+					font-weight: 800
+					font-size: 18px
+					line-height: 145%
+					width: 130px
+					text-align: center
+				& .category-card__label
+					background-color: var(--green)
+					width: 100%
+			@media(min-width:$xl)
+				display: none
+	&__item
+
+.page-title
+
+.category-card
+	background-color: var(--gray)
+	display: block
+	width: 100%
+	height: 100%
+	&:hover
+		& .category-card__label
+			background-color: var(--green)
+	&__ph-box
+		width: 140px
+		height: 110px
+		@media(min-width:$md)
+			width: 216px
+			height: 170px
+		@media(min-width:$xl)
+			width: 270px
+			height: 210px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__label
+		background-color: var(--black)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 12px
+		@media(min-width:$md)
+			padding: 15px
+		@media(min-width:$xl)
+			padding: 20px 15px 20px
+	&__title
+		font-size: 14px
+		font-weight: 600
+		line-height: 17px
+		color: var(--white)
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+		max-width: 105px
+		@media(min-width:$md)
+			font-size: 16px
+			line-height: 20px
+		@media(min-width:$xl)
+			font-weight: 700
+	&__arrow
+		display: none
+		@media(min-width:$xl)
+			display: block

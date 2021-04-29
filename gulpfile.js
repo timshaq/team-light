@@ -46,7 +46,7 @@ function styles() {
             outputStyle: "expanded"
         })
     )
-    .pipe(autopref({grid:true}))
+    .pipe(autopref())
     .pipe(sourcemaps.init())
     .pipe(concat(`style.css`))
         .pipe(sourcemaps.write('/srcmaps/'))

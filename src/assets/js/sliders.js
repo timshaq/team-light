@@ -61,4 +61,38 @@ export default function () {
 			},
 
 		})
+
+
+
+
+	const chanceSlider = new Swiper('#chanceSlider', {
+			pagination: {
+				el: '#chanceSliderPagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					loop: true,
+				},
+				768: {
+					slidesPerView: 1.5,
+					spaceBetween: 30,
+					centeredSlides: true,
+					loop: true,
+					width: 768,
+				},
+				1200: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+					centeredSlides: true,
+					loop: true,
+					width: 1170,
+				},
+			},
+
+		})
+
 }
