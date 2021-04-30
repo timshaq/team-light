@@ -1,0 +1,147 @@
+.cab-title
+	font-weight: 600
+	font-size: 16px
+	line-height: 145%
+	@media(min-width:$md)
+		font-weight: 700
+		font-size: 18px
+.cab-box
+	@media(min-width:$xl)
+		display: flex
+		justify-content: space-between
+.cab-content
+	@media(min-width:$xl)
+		width: 870px
+.cab-nav
+	width: 320px
+	transform: translateX(-15px)
+	overflow-x: scroll
+	@media(min-width:$md)
+		width: auto
+		transform: translateX(0)
+		overflow-x: auto
+	@media(min-width:$xl)
+		width: 270px
+	&__list
+		@media(max-width:1199px)
+			padding: 22px 30px
+			background-color: var(--gray)
+			display: flex
+			width: fit-content
+		@media(min-width:$md) and (max-width:1199px)
+			border-radius: 10px
+	&__li
+		& + .cab-nav__li
+			margin-left: 50px
+			@media(min-width:$xl)
+				margin-left: 0
+		&.active
+			@media(max-width:1199px)
+				position: relative
+				&:before
+					content: ''
+					height: 5px
+					width: 40px
+					background-color: var(--green)
+					border-radius: 3px 3px 0px 0px
+					position: absolute
+					top: calc(100% + 22px - 5px)
+					left: 50%
+					transform: translate(-50%,0)
+			& .cab-nav__a
+				color: var(--green)
+		&.exit
+		@media(min-width:$xl)
+			padding-left: 20px
+			padding-right: 20px
+			padding-top: 10px
+			padding-bottom: 10px
+			border-left: 1px solid var(--black10)
+			border-right: 1px solid var(--black10)
+			&:first-child
+				border-top: 1px solid var(--black10)
+				padding-top: 20px
+			&:nth-last-child(2)
+				border-bottom: 1px solid var(--black10)
+				padding-bottom: 20px
+			&:last-child
+				border: 1px solid var(--black10)
+				margin-top: 20px
+				padding: 15px 20px
+	&__a
+		font-weight: 500
+		font-size: 13px
+		line-height: 150%
+		display: block
+		white-space: nowrap
+		@media(min-width:$xl)
+			font-weight: 600
+			font-size: 14px
+
+.profile-form
+	margin-top: 30px
+	@media(min-width:$xl)
+		margin-top: 0
+	&__title
+	&__fields
+		margin-top: 15px
+		margin-bottom: 30px
+		display: grid
+		grid-template-columns: repeat(1, 1fr)
+		grid-gap: 15px
+		@media(min-width:$md)
+			margin-top: 20px
+			margin-bottom: 40px
+		@media(min-width:$xl)
+			margin-top: 30px
+			margin-bottom: 40px
+		&.type1
+			@media(min-width:$md)
+				grid-template-columns: repeat(3, 1fr)
+				grid-gap: 30px
+		&.type2
+			@media(min-width:$md)
+				grid-template-columns: repeat(12, 1fr)
+				grid-gap: 30px
+				& .profile-form__field:first-child
+					grid-column-start: span 5
+				& .profile-form__field:nth-child(2)
+					grid-column-start: span 7
+				& .profile-form__field:nth-child(3)
+					grid-column-start: span 6
+				& .profile-form__field:last-child,
+				.profile-form__field:nth-child(4)
+					grid-column-start: span 3
+		&.type3
+			@media(min-width:$md)
+				grid-template-columns: repeat(3, 1fr)
+				grid-gap: 30px
+	&__field
+	&__field-icon
+		width: 20px
+		height: 20px
+		object-fit: contain
+		position: absolute
+		right: 14px
+		top: 50%
+		transform: translateY(-50%)
+
+	&__label
+
+	&__input
+
+	&__note
+	&__submit
+		width: 100%
+		@media(min-width:$md)
+			width: 216px
+		@media(min-width:$xl)
+			width: 170px
+
+.subscribe-form
+	& .cab-title
+		margin-bottom: 15px
+		@media(min-width:$md)
+			margin-bottom: 20px
+	& .label-checkbox
+		margin: 30px 0

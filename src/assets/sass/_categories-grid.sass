@@ -6,16 +6,13 @@
 	@media(min-width:$xl)
 		margin-top: 60px
 		padding-bottom: 80px
-	&__header
+	& .section-header__header-link
+		display: block
 		@media(min-width:$md)
-			display: flex
-			justify-content: space-between
-			align-items: center
-	&__title
-	&__header-link
-		display: none
-		@media(min-width:$md)
+			display: none
+		@media(min-width:$xl)
 			display: block
+	&__title
 	&__list
 		display: grid
 		grid-template-columns: repeat(2,1fr)
