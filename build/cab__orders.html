@@ -82,13 +82,76 @@
 		<section class="cab-content">
 
 			<div class="cab-content__header">
-				<h1 class="cab-content__title cab-title">
+				<h2 class="cab-content__title cab-title">
 					Мои заказы
-				</h1>
-				<a href="#" class="cab-content__header-link">
-					
+				</h2>
+				<a href="#" class="cab-content__header-link green-color">
+					История <span class="text-mob-hidden">заказов</span>
 				</a>
 			</div>
+
+			<ul class="cab-orders">
+				<li class="cab-orders__item cab-orders-item">
+					<h3 class="cab-orders-item__header">
+						Заказ №4 от 15.04.2021, 6 товаров на сумму 8 815 ₽
+					</h3>
+					
+					<div class="cab-orders-item__option">
+						<span class="cab-orders-item__option-text">
+							Оплата
+						</span>
+
+						<h4 class="cab-orders-item__option-value">
+							Счет №4 от 15.04.2021, Наличный расчет
+						</h4>
+						<!-- 
+							Цвета статусов по классу:
+							красный — по умолчанию;
+							оранжевый — wait;
+							зеленый — success.
+							Например:
+							class="cab-orders-item__option-status wait | success"
+						 -->
+						<div class="cab-orders-item__option-status">
+							Не оплачено
+						</div>
+
+						<span class="cab-orders-item__option-text">
+							Сумма к оплате по счету: 8 815 ₽
+						</span>
+
+						<a href="#" class="cab-orders-item__option-link green-color">
+							Заменить способ оплаты
+						</a>
+					</div>
+					
+					<div class="cab-orders-item__option">
+						<span class="cab-orders-item__option-text">
+							Доставка
+						</span>
+
+						<h4 class="cab-orders-item__option-value">
+							Отгрузка №4/2, Бесплатаная доставка
+						</h4>
+
+						<div class="cab-orders-item__option-status">
+							Не отгружено
+						</div>
+
+						<span class="cab-orders-item__option-text">
+							Статус доставки: <strong>ожидает обработки</strong>
+						</span>
+
+						<span class="cab-orders-item__option-text">
+							Служба доставки: Доставка курьером
+						</span>
+					</div>
+
+					<a href="#" class="cab-orders-item__link green-color">
+						Подробнее о заказе
+					</a>
+				</li>
+			</ul>
 
 			
 			

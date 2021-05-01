@@ -3302,6 +3302,17 @@ label.label-checkbox span {
   }
 }
 
+.cab-content__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .cab-nav {
   width: 320px;
   -webkit-transform: translateX(-15px);
@@ -3510,6 +3521,132 @@ label.label-checkbox span {
 @media (min-width: 1200px) {
   .profile-form__submit {
     width: 170px;
+  }
+}
+
+.cab-orders {
+  margin-top: 20px;
+}
+
+.cab-orders-item {
+  border: 1px solid var(--black10);
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.cab-orders-item__header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 145%;
+  padding: 15px 45px 15px 15px;
+  background-color: var(--gray);
+  border-radius: 5px;
+  position: relative;
+}
+
+.cab-orders-item__header:before {
+  content: url("../img/tab-arrow.svg");
+  width: 17px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .cab-orders-item__header {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+.cab-orders-item__option {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .cab-orders-item__option {
+    position: relative;
+  }
+}
+
+.cab-orders-item__option + .cab-orders-item__option {
+  border-top: 1px solid var(--black10);
+}
+
+.cab-orders-item__option-text {
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--black60);
+  margin: 15px 0;
+  display: block;
+}
+
+.cab-orders-item__option-value {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .cab-orders-item__option-value {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.cab-orders-item__option-link {
+  font-size: 14px;
+  line-height: 150%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.cab-orders-item__option-status {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--white);
+  padding: 10px 15px;
+  background-color: var(--red);
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .cab-orders-item__option-status {
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.cab-orders-item__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  position: absolute;
+  left: 15px;
+  bottom: -15px;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+@media (min-width: 1200px) {
+  .subscribe-form {
+    width: 470px;
   }
 }
 

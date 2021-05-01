@@ -12,6 +12,9 @@
 .cab-content
 	@media(min-width:$xl)
 		width: 870px
+	&__header
+		display: flex
+		justify-content: space-between
 .cab-nav
 	width: 320px
 	transform: translateX(-15px)
@@ -137,8 +140,92 @@
 			width: 216px
 		@media(min-width:$xl)
 			width: 170px
+.cab-orders
+	margin-top: 20px
+	&__item
+
+.cab-orders-item
+	border: 1px solid var(--black10)
+	margin-bottom: 60px
+	position: relative
+	&__header
+		font-weight: 500
+		font-size: 14px
+		line-height: 145%
+		padding: 15px 45px 15px 15px
+		background-color: var(--gray)
+		border-radius: 5px
+		position: relative
+		&:before
+			content: url('../img/tab-arrow.svg')
+			width: 17px
+			height: 20px
+			position: absolute
+			top: 50%
+			right: 15px
+			transform: translateY(-50%)
+		@media(min-width:$md)
+			font-weight: 600
+			font-size: 17px
+			line-height: 21px
+	&__option
+		padding-left: 15px
+		padding-right: 15px
+		padding-bottom: 20px
+		@media(min-width:$md)
+			position: relative
+		& + .cab-orders-item__option
+			border-top: 1px solid var(--black10)
+	&__option-text
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin: 15px 0
+		display: block
+	&__option-value
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+		margin: 10px 0
+		@media(min-width:$md)
+			font-size: 16px
+			line-height: 20px
+	&__option-link
+		font-size: 14px
+		line-height: 150%
+		text-decoration-line: underline
+	&__option-status
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+		color: var(--white)
+		padding: 10px 15px
+		background-color: var(--red)
+		border-radius: 5px
+		width: fit-content
+		margin: 20px 0
+		@media(min-width:$md)
+			margin: 0
+			position: absolute
+			top: 20px
+			right: 20px
+		&.wait
+		&.success
+	&__link
+		font-weight: 600
+		font-size: 14px
+		line-height: 150%
+		position: absolute
+		left: 15px
+		bottom: -15px
+		transform: translateY(100%)
+
+
+
 
 .subscribe-form
+	@media(min-width:$xl)
+		width: 470px
 	& .cab-title
 		margin-bottom: 15px
 		@media(min-width:$md)
