@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+	<title>Мой заказ №4, создан 15.04.2021</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+</head>
+
+<body id="body">
+
+@@include('assets/html/header.html')
+
+<main>
+
+
+<ul class="breadscrumb fix-box">
+	<li class="breadscrumb-item">
+		<a href="#">Главная</a>
+	</li>
+	<li class="breadscrumb-item">
+		<a href="#">Профиль</a>
+	</li>
+	<li class="breadscrumb-item">
+		<a href="#">Мои заказы</a>
+	</li>
+</ul>
+
+
+
+
+<div class="fix-box">
+	<div class="cab-box">
+		<nav class="cab-nav">
+			<ul class="cab-nav__list">
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						Мои данные
+					</a>
+				</li>
+				
+				<li class="cab-nav__li active">
+					<a href="#" class="cab-nav__a">
+						Мои заказы
+					</a>
+				</li>
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						История заказов
+					</a>
+				</li>
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						Избранное
+					</a>
+				</li>
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						Подписка
+					</a>
+				</li>
+				
+				<li class="cab-nav__li exit">
+					<a href="#" class="cab-nav__a">
+						Выход
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+
+		<section class="cab-content">
+
+			<div class="cab-content__header">
+				<h2 class="cab-content__title cab-title">
+					Мой заказ №4, создан 15.04.2021
+				</h2>
+			</div>
+
+			<div class="cab-order">
+				<h3 class="cab-orders-item__header">
+					Заказ №4 от 15.04.2021, 6 товаров на сумму 8 815 ₽
+				</h3>
+
+				<div class="cab-order__option">
+					<h4 class="cab-order__header">
+						Информация о заказе
+					</h4>
+					<div class="cab-order__info order-info">
+						<div class="order-info__content">
+							<div class="order-info__text-col">
+								<h5 class="order-info__key">
+									ФИО:
+								</h5>
+								<span class="order-info__value">
+									Владислав Наумов
+								</span>
+							</div>
+							<div class="order-info__text-col">
+								<h5 class="order-info__key">
+									Текущий статус, от 15.04.2021
+								</h5>
+								<span class="order-info__value">
+									Принят, ожидается оплата
+								</span>
+							</div>
+							<div class="order-info__text-col">
+								<h5 class="order-info__key">
+									Сумма:
+								</h5>
+								<span class="order-info__value">
+									8 815 ₽
+								</span>
+							</div>
+							<div class="order-info__controls">
+								<a href="#" class="order-info__repeat btn-green">
+									Повторить заказ
+								</a>
+								<a href="#" class="order-info__cancel">
+									Отменить
+								</a>
+							</div>
+						</div>
+						<button class="order-info__toggler green-color" id="orderInfoToggler">
+							Скрыть
+						</button>
+					</div>
+				</div>
+
+				<div class="cab-order__option">
+					<h4 class="cab-order__header">
+						Параметры оплаты
+					</h4>
+					<div class="cab-order__pay order-param">
+						<h5 class="order-param__title">
+							Заказ №4 от 15.04.2021, Принят, ожидается оплата
+						</h5>
+						<span class="order-param__text">
+							Сумма заказа 8 815 ₽
+						</span>
+						<div class="order-param__payment">
+							<div class="cab-orders-item__option">
+
+								<h6 class="cab-orders-item__option-value">
+									Счет №4/1 от 15.04.2021, Наличный расчет
+								</h6>
+								<!-- 
+									Цвета статусов по классу:
+									красный — по умолчанию;
+									оранжевый — wait;
+									зеленый — success.
+									Например:
+									class="cab-orders-item__option-status wait | success"
+								 -->
+
+								<span class="cab-orders-item__option-text">
+									Сумма к оплате по счету: 8 815 ₽
+								</span>
+								
+								<div class="cab-orders-item__option-status">
+									Не оплачено
+								</div>
+
+								<a href="#" class="cab-orders-item__option-link green-color">
+									Сменить способ оплаты
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cab-order__option">
+					<h4 class="cab-order__header">
+						Параметры отгрузки
+					</h4>
+					<div class="cab-order__pay order-param">
+						<h5 class="order-param__title">
+							Отгрузка №4/2, Бесплатная доставка
+						</h5>
+						<span class="order-param__text">
+							Служба доставки: Доставка курьером
+						</span>
+						<span class="order-param__text">
+							Статус отгрузки: Ожидает обработки
+						</span>
+					</div>
+					<div class="cab-order__inside-option toggleable active">
+						<div class="cab-order__option">
+							<h4 class="cab-order__header">
+								Состав отгрузки
+							</h4>
+							<div class="cab-order__table order-table">
+								<div class="order-table__row order-table__row_hr">
+									<div class="order-table__col1">
+										<span class="order-param__text">
+											Наименование:
+										</span>
+									</div>
+									<div class="order-table__col2">
+										<span class="order-param__text">
+											Кол-во:
+										</span>
+									</div>
+								</div>
+								<div class="order-table__row">
+									<div class="order-table__col1">
+										<a href="#" class="order-table__product prod-horizontal">
+											<div class="prod-horizontal__ph-box">
+												<img src="assets/img/prod-horizontal.png" alt="" class="prod-horizontal__ph">
+											</div>
+											<div class="prod-horizontal__text">
+												<div class="prod-horizontal__made">
+													<span class="prod-horizontal__made-txt  gray-color">
+														Lightstar (Италия)
+													</span>
+													<span class="prod-horizontal__made-txt text-only-mob  gray-color">
+														1 шт.
+													</span>
+												</div>
+												<h5 class="prod-horizontal__name">
+													Потолочная люстра Nowodvorski Coba 9724
+												</h5>
+											</div>
+										</a>
+									</div>
+									<div class="order-table__col2">
+										<strong>
+											1 шт.
+										</strong>
+									</div>
+								</div>
+								<div class="order-table__row">
+									<div class="order-table__col1">
+										<a href="#" class="order-table__product prod-horizontal">
+											<div class="prod-horizontal__ph-box">
+												<img src="assets/img/prod-horizontal.png" alt="" class="prod-horizontal__ph">
+											</div>
+											<div class="prod-horizontal__text">
+												<div class="prod-horizontal__made">
+													<span class="prod-horizontal__made-txt  gray-color">
+														Lightstar (Италия)
+													</span>
+													<span class="prod-horizontal__made-txt text-only-mob  gray-color">
+														1 шт.
+													</span>
+												</div>
+												<h5 class="prod-horizontal__name">
+													Потолочная люстра Nowodvorski Coba 9724
+												</h5>
+											</div>
+										</a>
+									</div>
+									<div class="order-table__col2">
+										<strong>
+											1 шт.
+										</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cab-order__option">
+					<h4 class="cab-order__header">
+						Содержимое заказа
+					</h4>
+					<div class="cab-order__table2 order-table2">
+						<div class="order-table2__row order-table2__row_hr">
+							<div class="order-table2__col1">
+								<span class="gray-color">
+									Наименование:
+								</span>
+							</div>
+							<div class="order-table2__flex-box">
+								<div class="order-table2__col-slim">
+									<span class="gray-color">
+										Цена:
+									</span>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color">
+										Скидка:
+									</span>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color">
+										Кол-во:
+									</span>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color">
+										Сумма:
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="order-table2__row">
+							<div class="order-table2__col1">
+								<a href="#" class="order-table__product prod-horizontal">
+									<div class="prod-horizontal__ph-box">
+										<img src="assets/img/prod-horizontal.png" alt="" class="prod-horizontal__ph">
+									</div>
+									<div class="prod-horizontal__text">
+										<div class="prod-horizontal__made">
+											<span class="prod-horizontal__made-txt gray-color">
+												Lightstar (Италия)
+											</span>
+										</div>
+										<h5 class="prod-horizontal__name">
+											Потолочная люстра Nowodvorski Coba 9724
+										</h5>
+									</div>
+								</a>
+							</div>
+							<div class="order-table2__flex-box">
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Цена:
+									</span>
+									<strong>
+										10 490 ₽
+									</strong>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Скидка: 
+									</span>
+									<strong>
+										15%
+									</strong>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Кол-во:
+									</span>
+									<strong>
+										1 шт.
+									</strong>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Сумма:
+									</span>
+									<strong>
+										8 490 ₽
+									</strong>
+								</div>
+							</div>
+						</div>
+						<div class="order-table2__row">
+							<div class="order-table2__col1">
+								<a href="#" class="order-table__product prod-horizontal">
+									<div class="prod-horizontal__ph-box">
+										<img src="assets/img/prod-horizontal.png" alt="" class="prod-horizontal__ph">
+									</div>
+									<div class="prod-horizontal__text">
+										<div class="prod-horizontal__made">
+											<span class="prod-horizontal__made-txt gray-color">
+												Lightstar (Италия)
+											</span>
+										</div>
+										<h5 class="prod-horizontal__name">
+											Потолочная люстра Nowodvorski Coba 9724
+										</h5>
+									</div>
+								</a>
+							</div>
+							<div class="order-table2__flex-box">
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Цена:
+									</span>
+									<strong>
+										10 490 ₽
+									</strong>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Скидка: 
+									</span>
+									<strong>
+										-
+									</strong>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Кол-во:
+									</span>
+									<strong>
+										1 шт.
+									</strong>
+								</div>
+								<div class="order-table2__col-slim">
+									<span class="gray-color text-pc-hidden">
+										Сумма:
+									</span>
+									<strong>
+										8 490 ₽
+									</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="cab-orders-item__option">
+					<span class="cab-orders-item__option-text">
+						Оплата
+					</span>
+
+					<h4 class="cab-orders-item__option-value">
+						Счет №4 от 15.04.2021, Наличный расчет
+					</h4>
+					<!-- 
+						Цвета статусов по классу:
+						красный — по умолчанию;
+						оранжевый — wait;
+						зеленый — success.
+						Например:
+						class="cab-orders-item__option-status wait | success"
+					 -->
+					<div class="cab-orders-item__option-status">
+						Не оплачено
+					</div>
+
+					<span class="cab-orders-item__option-text">
+						Сумма к оплате по счету: 8 815 ₽
+					</span>
+
+					<a href="#" class="cab-orders-item__option-link green-color">
+						Заменить способ оплаты
+					</a>
+				</div>
+				
+				<div class="cab-orders-item__option">
+					<span class="cab-orders-item__option-text">
+						Доставка
+					</span>
+
+					<h4 class="cab-orders-item__option-value">
+						Отгрузка №4/2, Бесплатаная доставка
+					</h4>
+
+					<div class="cab-orders-item__option-status">
+						Не отгружено
+					</div>
+
+					<span class="cab-orders-item__option-text">
+						Статус доставки: <strong>ожидает обработки</strong>
+					</span>
+
+					<span class="cab-orders-item__option-text">
+						Служба доставки: Доставка курьером
+					</span>
+				</div>
+
+				<a href="#" class="cab-orders-item__link green-color">
+					Вернуться к списку заказов
+				</a>
+			</div>
+
+			
+			
+		</section>
+	</div>
+</div>
+
+
+
+</main>
+
+@@include('assets/html/footer.html')
+
+</body>
+
+
+
+</html>

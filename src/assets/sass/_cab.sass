@@ -156,6 +156,7 @@
 		background-color: var(--gray)
 		border-radius: 5px
 		position: relative
+		cursor: pointer
 		&:before
 			content: url('../img/tab-arrow.svg')
 			width: 17px
@@ -163,12 +164,19 @@
 			position: absolute
 			top: 50%
 			right: 15px
-			transform: translateY(-50%)
+			transform: translateY(-50%) rotate(180deg)
 		@media(min-width:$md)
 			font-weight: 600
 			font-size: 17px
 			line-height: 21px
+	&.active
+		& .cab-orders-item__header
+			&:before
+				transform: translateY(-50%) rotate(0deg)
+		& .cab-orders-item__option
+			display: block
 	&__option
+		display: none
 		padding-left: 15px
 		padding-right: 15px
 		padding-bottom: 20px
@@ -210,7 +218,9 @@
 			top: 20px
 			right: 20px
 		&.wait
+			background-color: orange
 		&.success
+			background-color: var(--green)
 	&__link
 		font-weight: 600
 		font-size: 14px
@@ -220,9 +230,295 @@
 		bottom: -15px
 		transform: translateY(100%)
 
+.cab-order
+	position: relative
+	border: 1px solid var(--gray)
+	margin-top: 20px
+	&__option
+		margin: 20px 0
+	&__header
+		width: 100%
+		padding: 15px 20px
+		background-color: var(--gray)
+		font-weight: 500
+		line-height: 17px
+	&__info
+	&__pay
+	&__table2
+	&__inside-option
+		padding: 0 15px
+		&.toggleable
+			& .cab-order__header
+				position: relative
+				cursor: pointer
+				&:before
+					content: url('../img/tab-arrow.svg')
+					width: 17px
+					height: 20px
+					position: absolute
+					top: 50%
+					right: 15px
+					transform: translateY(-50%) rotate(180deg)
+			& .order-table
+				display: none
+			&.active
+				& .order-table
+					display: block
+				& .cab-order__header
+					&:before
+						transform: translateY(-50%) rotate(0deg)
+
+.order-table
+	@media(min-width:$md)
+		padding: 0 15px
+	&__row
+		margin-top: 20px
+		padding-bottom: 15px
+		&:not(:last-child)
+			border-bottom: 1px solid var(--black10)
+		@media(min-width:$md)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding-bottom: 0
+		&_hr
+			display: none
+			@media(min-width:$md)
+				display: flex
+	&__col1
+		@media(min-width:$md)
+			width: 350px
+	&__product
+	&__col2
+		display: none
+		@media(min-width:$md)
+			display: block
+			width: 185px
+
+.order-table2
+	padding: 0 15px
+	&__row
+		margin-top: 20px
+		padding-bottom: 15px
+		&:not(:last-child)
+			border-bottom: 1px solid var(--black10)
+		@media(min-width:$xl)
+			display: flex
+			justify-content: space-between
+			align-items: center
+		&_hr
+			display: none
+			@media(min-width:$xl)
+				display: flex
+	&__col1
+		@media(min-width:$md)
+			width: 350px
+	&__flex-box
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-top: 15px
+		@media(min-width:$xl)
+			margin: 0
+	&__col-slim
+		width: 50%
+		margin: 10px 0
+		@media(min-width:$md)
+			width: 25%
+		@media(min-width:$xl)
+			width: 100px
+			margin: 0
+
+.prod-horizontal
+	display: block
+	@media(min-width:$md)
+		display: flex
+		justify-content: space-between
+		margin: 15px 0
+	&__ph-box
+		width: 100px
+		height: 100px
+	&__ph-box2
+		width: 100px
+		height: 100px
+		@media(min-width:$xl)
+			width: 120px
+			height: 120px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__text
+		@media(min-width:$md)
+			width: 230px
+	&__text2
+		@media(min-width:$md)
+			width: 210px
+		@media(min-width:$xl)
+			width: 230px
+	&__made
+		display: flex
+		justify-content: space-between
+		margin: 10px 0
+	&__made-txt
+		font-size: 12px
+		line-height: 17px
+	&__name
+		font-weight: 600
+		font-size: 16px
+		line-height: 23px
+	&__props
+		display: flex
+		justify-content: space-between
+		margin-top: 10px
+		@media(min-width:$md)
+			margin-top: 15px
+	&__price
+		font-weight: 700
+		font-size: 14px
+		@media(min-width:$md)
+			font-size: 16px
+			line-height: 20px
+		@media(min-width:$xl)
+			font-size: 18px
+			line-height: 22px
+.text-mob-hidden
+
+.order-param
+	&__text
 
 
 
+.order-info
+	padding: 0 15px
+	&__content
+		@media(min-width:$md)
+			display: flex
+			flex-wrap: wrap
+			margin-top: 20px
+		@media(min-width:$xl)
+			flex-wrap: nowrap
+			justify-content: space-between
+	&__text-col
+		margin: 20px 0
+		@media(min-width:$md)
+			margin: 0
+			& + .order-info__text-col
+				margin-left: 25px
+	&__key
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+	&__value
+		font-size: 14px
+		line-height: 17px
+		display: block
+		margin-top: 5px
+	&__controls
+		margin-top: 20px
+		@media(min-width:$md)
+			width: 100%
+			display: flex
+			margin-top: 40px
+		@media(min-width:$xl)
+			width: 170px
+			margin-top: 0
+			flex-direction: column
+	&__repeat
+		display: block
+		@media(min-width:$xl)
+			padding: 15px 20px
+
+	&__cancel
+		font-size: 14px
+		line-height: 150%
+		color: var(--black60)
+		margin-top: 10px
+		display: block
+		text-align: center
+		@media(min-width:$md)
+			margin-top: 0
+			margin-left: 25px
+		@media(min-width:$xl)
+			margin-top: 10px
+			margin-left: 0
+	&__toggler
+		margin-top: 30px
+
+.order-param
+	padding-top: 20px
+	padding-left: 20px
+	padding-right: 20px
+	& .cab-orders-item__option
+		display: block
+		padding: 0
+		@media(min-width:$md)
+			padding-left: 40px
+	& .cab-orders-item__option-value
+		font-size: 14px
+	&__title
+		font-weight: 600
+	&__text
+		color: var(--black60)
+		margin: 20px 0
+		display: block
+	&__payment
+		margin-top: 20px
+		padding-top: 10px
+		border-top: 1px solid var(--black10)
+
+.cab-history
+	margin-top: 20px
+	&__list
+
+	&__li
+		& + .cab-history__li
+			margin-top: 15px
+			@media(min-width:$md)
+				margin-top: 30px
+	&__item
+
+.cab-history-item
+	&__header
+		display: flex
+		background-color: var(--gray)
+		padding: 15px
+		border-radius: 5px 5px 0 0
+		border: 1px solid var(--gray)
+	&__col
+		width: 50%
+		display: flex
+		flex-direction: column
+		&_right
+			justify-content: center
+			align-items: flex-end
+	&__title
+		font-weight: 700
+		font-size: 16px
+		line-height: 20px
+		@media(min-width:$md)
+			font-size: 17px
+	&__subtitle
+		line-height: 21px
+		margin-top: 7px
+	&__prods
+		padding: 15px
+		border-bottom: 1px solid var(--black10)
+		border-left: 1px solid var(--black10)
+		border-right: 1px solid var(--black10)
+		@media(min-width:$md)
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 30px
+		@media(min-width:$xl)
+			grid-gap: 70px
+	&__prod
+		& + .cab-history-item__prod
+			margin-top: 20px
+			border-top: 1px solid var(--black10)
+			@media(min-width:$md)
+				margin: 0
+				border: none
 .subscribe-form
 	@media(min-width:$xl)
 		width: 470px

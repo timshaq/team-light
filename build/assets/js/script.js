@@ -267,6 +267,22 @@
   },
 
   /***/
+  "./src/assets/js/cabToggler.js":
+  /*!*************************************!*\
+    !*** ./src/assets/js/cabToggler.js ***!
+    \*************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst ordersItemsNL = document.querySelectorAll('.cab-orders .cab-orders-item');\r\n\tif(!ordersItemsNL) return;\r\n\tconst ordersItemsList = Array.prototype.slice.call(ordersItemsNL);\r\n\r\n\tordersItemsList.forEach(item => {\r\n\t\titem.addEventListener('click', function() {\r\n\t\t\treturn (item.classList.contains('active')) ? item.classList.remove('active') : item.classList.add('active');\r\n\t\t})\r\n\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/cabToggler.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/script.js":
   /*!*********************************!*\
     !*** ./src/assets/js/script.js ***!
@@ -278,7 +294,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _yamap_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./yamap.js */ \"./src/assets/js/yamap.js\");\n/* harmony import */ var _blogLineFeed_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blogLineFeed.js */ \"./src/assets/js/blogLineFeed.js\");\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_yamap_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_blogLineFeed_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _yamap_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./yamap.js */ \"./src/assets/js/yamap.js\");\n/* harmony import */ var _blogLineFeed_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blogLineFeed.js */ \"./src/assets/js/blogLineFeed.js\");\n/* harmony import */ var _cabToggler_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cabToggler.js */ \"./src/assets/js/cabToggler.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_yamap_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_blogLineFeed_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_cabToggler_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -316,15 +332,15 @@
 
   /***/
   0:
-  /*!***************************************************************************************************************************!*\
-    !*** multi ./src/assets/js/blogLineFeed.js ./src/assets/js/script.js ./src/assets/js/sliders.js ./src/assets/js/yamap.js ***!
-    \***************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************!*\
+    !*** multi ./src/assets/js/blogLineFeed.js ./src/assets/js/cabToggler.js ./src/assets/js/script.js ./src/assets/js/sliders.js ./src/assets/js/yamap.js ***!
+    \*********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\blogLineFeed.js */\"./src/assets/js/blogLineFeed.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\yamap.js */\"./src/assets/js/yamap.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/blogLineFeed.js_./src/assets/js/script.js_./src/assets/js/sliders.js_./src/assets/js/yamap.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\blogLineFeed.js */\"./src/assets/js/blogLineFeed.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\cabToggler.js */\"./src/assets/js/cabToggler.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\yamap.js */\"./src/assets/js/yamap.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/blogLineFeed.js_./src/assets/js/cabToggler.js_./src/assets/js/script.js_./src/assets/js/sliders.js_./src/assets/js/yamap.js?");
     /***/
   }
   /******/
