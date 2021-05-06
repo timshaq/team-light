@@ -2,6 +2,7 @@
 
 ## HTML naming
 1. Главная — index.html
+1. Оформление заказа — order.html
 1. Новости — feed.html
 1. Открытая новость — article.html 
 1. Контакты — contacts.html

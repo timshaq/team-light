@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+	<title>История заказов</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+</head>
+
+<body id="body">
+
+<header class="header" id="header">
+	
+	HEADER
+
+</header>
+
+<main>
+
+
+<ul class="breadscrumb fix-box">
+	<li class="breadscrumb-item">
+		<a href="#">Главная</a>
+	</li>
+	<li class="breadscrumb-item">
+		<a href="#">Корзина</a>
+	</li>
+	<li class="breadscrumb-item">
+		<a href="#">Оформление заказа</a>
+	</li>
+</ul>
+
+<div class="fix-box">
+
+	<h1 class="page-title">
+		Оформление заказа
+	</h1>
+
+	<div class="order">
+		<form id="orderForm" class="order__form">
+			<fieldset class="order__section">
+				<legend>
+					<h2 class="order__title">
+						Контактные данные
+					</h2>
+				</legend>
+				<ul class="order__fields type1">
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Имя">
+							<span class="order__note input-note">
+								Имя
+							</span>
+						</label>
+					</li>
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Фамилия">
+							<span class="order__note input-note">
+								Фамилия
+							</span>
+						</label>
+					</li>
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="email" class="order__input" placeholder="Email">
+							<span class="order__note input-note">
+								Email
+							</span>
+						</label>
+					</li>
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Номер телефона">
+							<span class="order__note input-note">
+								Номер телефона
+							</span>
+						</label>
+					</li>
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Регион/Область">
+							<span class="order__note input-note">
+								Регион/Область
+							</span>
+						</label>
+					</li>
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Населенный пункт">
+							<span class="order__note input-note">
+								Город/Населенный пункт
+							</span>
+						</label>
+					</li>
+					<li class="order__field lg">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Улица">
+							<span class="order__note input-note">
+								Улица
+							</span>
+						</label>
+					</li>
+					<li class="order__field">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Дом">
+							<span class="order__note input-note">
+								Дом
+							</span>
+						</label>
+					</li>
+					<li class="order__field">
+						<label class="order__label label-txt">
+							<input type="text" class="order__input" placeholder="Квартира">
+							<span class="order__note input-note">
+								Квартира
+							</span>
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset class="order__section">
+				<legend>
+					<h2 class="order__title">
+						Доставка
+					</h2>
+				</legend>
+				<ul class="order__fields type2">
+					<li class="order__field">
+						<label class="order__label label-radio">
+							<input type="radio" name="delivery" checked class="order__input">
+							<div></div>
+							<span class="order__note input-note">
+								Курьерская доставка
+							</span>
+						</label>
+					</li>
+					<li class="order__field">
+						<label class="order__label label-radio">
+							<input type="radio" name="delivery" class="order__input">
+							<div></div>
+							<span class="order__note input-note">
+								СДЭК
+							</span>
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset class="order__section">
+				<legend>
+					<h2 class="order__title">
+						Оплата
+					</h2>
+				</legend>
+				<ul class="order__fields type2">
+					<li class="order__field">
+						<label class="order__label label-radio">
+							<input type="radio" name="payment" checked class="order__input">
+							<div></div>
+							<span class="order__note input-note">
+								Наличными при получении
+							</span>
+						</label>
+					</li>
+					<li class="order__field">
+						<label class="order__label label-radio">
+							<input type="radio" name="payment" class="order__input">
+							<div></div>
+							<span class="order__note input-note">
+								Банковской картой
+							</span>
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+			<div class="order__section">
+				<h2 class="order__title">
+					Товары
+				</h2>
+				
+			</div>
+			<fieldset class="order__section">
+				<legend>
+					<h2 class="order__title">
+						Дополнительные услуги
+					</h2>
+				</legend>
+				<ul class="order__fields type3">
+					<li class="order__field">
+						<label class="order__label label-checkbox">
+							<input id="floorsCheckbox" type="checkbox" class="order__input">
+							<div></div>
+							<span class="order__note input-note">
+								Подъем по лестнице
+							</span>
+						</label>
+						<div class="order__floors label-num" id="floorBox">
+							<button type="button" class="label-num__btn minus" onclick="document.getElementById('floorsNumInput').stepDown()">-</button>
+
+							<input value="1" id="floorsNumInput" name="floors" min="1" type="number">
+
+							<button type="button" class="label-num__btn plus" onclick="document.getElementById('floorsNumInput').stepUp()">+</button>
+
+							<strong class="label-num__note">189 ₽</strong>
+						</div>
+					</li>
+					<li class="order__field">
+						<label class="order__label label-checkbox">
+							<input type="checkbox" class="order__input">
+							<div></div>
+							<span class="order__note input-note">
+								Сборка в день доставки <strong>449 ₽</strong>
+							</span>
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<aside class="order__cart-info cart-info">
+			<div class="cart-info__header">
+				<h2 class="cart-info__title">
+					Ваша корзина
+				</h2>
+				<span class="cart-info__count">
+					2 товара
+				</span>
+			</div>
+			<div class="cart-info__price">
+				<div class="cart-info__price-row">
+					<h3 class="cart-info__price-name">
+						Товары
+					</h3>
+					<span class="cart-info__price-value">
+						8 815 ₽
+					</span>
+				</div>
+				<div class="cart-info__price-row">
+					<h3 class="cart-info__price-name">
+						Скидка
+					</h3>
+					<span class="cart-info__price-value green-color">
+						3 360 ₽
+					</span>
+				</div>
+				<div class="cart-info__price-row">
+					<h3 class="cart-info__price-name">
+						Доставка
+					</h3>
+					<span class="cart-info__price-value">
+						0 ₽
+					</span>
+				</div>
+				<div class="cart-info__price-row">
+					<h3 class="cart-info__price-name">
+						Доп. услуги
+					</h3>
+					<span class="cart-info__price-value">
+						189 ₽
+					</span>
+				</div>
+				<div class="cart-info__price-row total">
+					<h3 class="cart-info__price-name">
+						Итого:
+					</h3>
+					<span class="cart-info__price-value">
+						9 004 ₽
+					</span>
+				</div>
+			</div>
+			<button type="submit" form="orderForm" class="cart-info__submit btn-green">
+				Оформить заказ
+			</button>
+			<p class="cart-info__note">
+				Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#" class="green-color">Условиями</a>, а также с <a href="#" class="green-color">Условиями продажи</a>.
+			</p>
+		</aside>
+	</div>
+</div>
+
+
+
+</main>
+
+<footer class="footer">
+
+	FOOTER
+
+</footer>
+
+<script src="assets/lib/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/script.min.js"></script>
+
+
+</body>
+
+
+
+</html>

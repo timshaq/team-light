@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   --black60: rgba(51,51,51,.6);
   --red: rgba(238,85,75,1);
   --green: rgba(132,183,57,1);
+  --green60: rgba(132,183,57,.6);
   --light-green: rgba(230,241,215,1);
   --purple: rgba(108,57,183,1);
   --gray-light: rgba(249,249,249,1);
@@ -645,15 +646,29 @@ label.label-checkbox input {
   position: absolute;
 }
 
+label.label-checkbox input:checked + div {
+  background-color: var(--white);
+  border: 1.5px solid var(--green);
+}
+
 label.label-checkbox input:checked + div:before {
   content: url("../img/checkbox.svg");
+  width: 14px;
+  height: 10px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 label.label-checkbox div {
-  width: 18px;
-  height: 18px;
-  background-color: var(--white);
-  border: 1px solid var(--green);
+  width: 20px;
+  height: 20px;
+  background-color: var(--gray);
+  border-radius: 3px;
+  border: 1.5px solid var(--black10);
   position: absolute;
   left: 0;
   top: 50%;
@@ -662,9 +677,126 @@ label.label-checkbox div {
           transform: translateY(-50%);
 }
 
+label.label-checkbox div.label-num {
+  margin-top: 15px;
+}
+
 label.label-checkbox span {
   font-size: 14px;
   line-height: 145%;
+}
+
+label.label-radio {
+  position: relative;
+  padding: 15px 15px 15px 43px;
+  display: block;
+  background-color: var(--gray);
+  border: 1px solid var(--black10);
+  border-radius: 5px;
+}
+
+label.label-radio input {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+label.label-radio input:checked + div {
+  background-color: var(--green60);
+  border: none;
+}
+
+label.label-radio input:checked + div:before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  background-color: var(--green);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+label.label-radio div {
+  width: 20px;
+  height: 20px;
+  background-color: var(--gray);
+  border-radius: 100%;
+  border: 1.5px solid var(--black10);
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+label.label-radio span {
+  font-size: 14px;
+  line-height: 145%;
+}
+
+.label-num {
+  position: relative;
+  padding: 5px;
+  background-color: var(--gray);
+  border: 1px solid var(--black10);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  background-color: var(--gray);
+}
+
+.label-num__btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--white);
+  font-size: 21px;
+  line-height: 31px;
+  color: var(--black60);
+}
+
+.label-num__note {
+  position: absolute;
+  right: -50px;
+}
+
+.label-num input {
+  display: block;
+  width: 60px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.label-num input::-webkit-inner-spin-button, .label-num input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .popular-brands {
@@ -1842,6 +1974,244 @@ label.label-checkbox span {
   font-weight: 600;
   font-size: 11px;
   line-height: 145%;
+}
+
+@media (min-width: 1200px) {
+  .order {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+}
+
+@media (min-width: 1200px) {
+  .order__cart-info {
+    width: 370px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .order__form {
+    width: 770px;
+  }
+}
+
+.order__section {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .order__section {
+    margin-top: 50px;
+  }
+}
+
+.order__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+@media (min-width: 768px) {
+  .order__title {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.order__fields {
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .order__fields {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .order__fields {
+    margin-top: 30px;
+  }
+}
+
+.order__fields.type1 {
+  display: grid;
+  grid-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .order__fields.type1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .order__fields.type1 .order__field.lg {
+    grid-column-start: span 2;
+  }
+}
+
+.order__fields.type2 {
+  display: grid;
+  grid-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .order__fields.type2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.order__fields.type3 {
+  display: grid;
+  grid-gap: 30px;
+  max-width: 300px;
+}
+
+.order__floors {
+  margin-top: 15px;
+}
+
+#floorsCheckbox:checked #floorBox {
+  visibility: visible;
+  position: relative;
+}
+
+.cart-info {
+  box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 20px 15px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .cart-info {
+    margin-top: 50px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cart-info {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+  }
+}
+
+.cart-info__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--black10);
+}
+
+.cart-info__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.cart-info__count {
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--black40);
+}
+
+.cart-info__price {
+  margin-top: 20px;
+}
+
+.cart-info__price-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-info__price-row.total {
+  padding-top: 15px;
+  margin-top: 0;
+  border-top: 1px solid var(--black10);
+}
+
+.cart-info__price-row.total .cart-info__price-name,
+.cart-info__price-row.total .cart-info__price-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 145%;
+  color: var(--black);
+}
+
+.cart-info__price-name, .cart-info__price-value {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (min-width: 768px) {
+  .cart-info__price-name, .cart-info__price-value {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.cart-info__price-name {
+  font-weight: 500;
+  color: var(--black40);
+}
+
+.cart-info__price-value {
+  font-weight: 600;
+}
+
+.cart-info__note {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cart-info__submit {
+  width: 260px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .cart-info__submit {
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 
 .feed-header {

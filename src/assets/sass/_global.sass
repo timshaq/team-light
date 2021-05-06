@@ -16,6 +16,7 @@ $xs: 576px
 	--black60: rgba(51,51,51,.6)
 	--red: rgba(238,85,75,1)
 	--green: rgba(132,183,57,1)
+	--green60: rgba(132,183,57,.6)
 	--light-green: rgba(230,241,215,1)
 	--purple: rgba(108,57,183,1)
 	--gray-light: rgba(249,249,249,1)
@@ -288,17 +289,98 @@ label
 			opacity: 0
 			position: absolute
 			&:checked + div
+				background-color: var(--white)
+				border: 1.5px solid var(--green)
 				&:before
 					content: url('../img/checkbox.svg')
+					width: 14px
+					height: 10px
+					position: absolute
+					bottom: 5px
+					left: 50%
+					transform: translateX(-50%)
 		& div
-			width: 18px
-			height: 18px
-			background-color: var(--white)
-			border: 1px solid var(--green)
+			width: 20px
+			height: 20px
+			background-color: var(--gray)
+			border-radius: 3px
+			border: 1.5px solid var(--black10)
 			position: absolute
 			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			&.label-num
+				margin-top: 15px
+		& span
+			font-size: 14px
+			line-height: 145%
+	&.label-radio
+		position: relative
+		padding: 15px 15px 15px 43px
+		display: block
+		background-color: var(--gray)
+		border: 1px solid var(--black10)
+		border-radius: 5px
+		& input
+			visibility: hidden
+			opacity: 0
+			position: absolute
+			&:checked + div
+				background-color: var(--green60)
+				border: none
+				&:before
+					content: ''
+					width: 11px
+					height: 11px
+					background-color: var(--green)
+					border-radius: 100%
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+		& div
+			width: 20px
+			height: 20px
+			background-color: var(--gray)
+			border-radius: 100%
+			border: 1.5px solid var(--black10)
+			position: absolute
+			left: 13px
 			top: 50%
 			transform: translateY(-50%)
 		& span
 			font-size: 14px
 			line-height: 145%
+.label-num
+	position: relative
+	padding: 5px
+	background-color: var(--gray)
+	border: 1px solid var(--black10)
+	border-radius: 5px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 140px
+	background-color: var(--gray)
+	&__btn
+		width: 34px
+		height: 34px
+		border-radius: 8px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--white)
+		font-size: 21px
+		line-height: 31px
+		color: var(--black60)
+	&__note
+		position: absolute
+		right: -50px
+	& input
+		display: block
+		width: 60px
+		text-align: center
+		background-color: transparent
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button
+			-webkit-appearance: none

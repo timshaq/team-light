@@ -1,0 +1,131 @@
+.order
+	@media(min-width:$xl)
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		position: relative
+	&__cart-info
+		@media(min-width:$xl)
+			width: 370px
+	&__submit
+	&__form
+		@media(min-width:$xl)
+			width: 770px
+
+	&__section
+		margin-top: 30px
+		@media(min-width:$md)
+			margin-top: 50px
+	&__title
+		font-weight: 700
+		font-size: 16px
+		line-height: 23px
+		@media(min-width:$md)
+			font-size: 20px
+			line-height: 29px
+	&__fields
+		margin-top: 15px
+		@media(min-width:$md)
+			margin-top: 20px
+		@media(min-width:$xl)
+			margin-top: 30px
+		&.type1
+			display: grid
+			grid-gap: 30px
+			@media(min-width:$md)
+				grid-template-columns: repeat(4, 1fr)
+				& .order__field.lg
+					grid-column-start: span 2
+		&.type2
+			display: grid
+			grid-gap: 30px
+			@media(min-width:$md)
+				grid-template-columns: repeat(2, 1fr)
+		&.type3
+			display: grid
+			grid-gap: 30px
+			max-width: 300px
+	&__field
+
+	&__label
+
+	&__input
+
+	&__note
+	&__floors
+		margin-top: 15px
+
+#floorsCheckbox:checked 
+	& #floorBox
+		visibility: visible
+		position: relative
+
+.cart-info
+	box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+	border-radius: 5px
+	padding: 20px 15px
+	margin-top: 30px
+	@media(min-width:$md)
+		margin-top: 50px
+		padding: 20px
+	@media(min-width:$xl)
+		position: sticky
+		top: 50px
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 15px
+		border-bottom: 1px solid var(--black10)
+	&__title
+		font-weight: 700
+		font-size: 16px
+		line-height: 23px
+	&__count
+		font-size: 14px
+		line-height: 17px
+		color: var(--black40)
+	&__price
+		margin-top: 20px
+	&__price-row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 15px
+		margin-bottom: 15px
+		&.total
+			padding-top: 15px
+			margin-top: 0
+			border-top: 1px solid var(--black10)
+			& .cart-info__price-name,
+			& .cart-info__price-value
+				font-weight: 700
+				font-size: 16px
+				line-height: 145%
+				color: var(--black)
+	&__price-name,
+	&__price-value
+		font-size: 14px
+		line-height: 17px
+		@media(min-width:$md)
+			font-size: 16px
+			line-height: 20px
+	&__price-name
+		font-weight: 500
+		color: var(--black40)
+	&__price-value
+		font-weight: 600
+	&__note
+		font-weight: 500
+		font-size: 12px
+		line-height: 20px
+		text-align: center
+		margin-top: 15px
+	&__submit
+		width: 260px
+		margin-top: 20px
+		margin-left: auto
+		margin-right: auto
+		@media(min-width:$md)
+			width: 100%
+			margin-top: 25px
