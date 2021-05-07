@@ -1,0 +1,198 @@
+.product-card
+	width: 140px
+	position: relative
+	padding: 10px
+	border: 1px solid var(--black10)
+	@media(min-width:$md)
+		width: 216px
+		padding: 10px 5px
+	@media(min-width:$xl)
+		width: 270px
+		padding: 15px 10px
+		border: none
+		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+		&:hover
+			& .product-card__preview-btn
+				opacity: 1
+				visibility: visible
+	&__made
+		display: none
+		@media(min-width:$md)
+			display: block
+			margin-bottom: 15px
+			padding-left: 5px
+	&__made-text
+		font-size: 12px
+		line-height: 17px
+		color: var(--black50)
+	&__ph-box
+		width: 120px
+		height: 140px
+		position: relative
+		@media(min-width:$md)
+			width: 206px
+			height: 206px
+		@media(min-width:$xl)
+			width: 250px
+			height: 250px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__sale-box
+		width: 30px
+		height: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 0
+		left: 0
+		@media(min-width:$md)
+			width: 40px
+			height: 40px
+			top: 10px
+			left: 10px
+		@media(min-width:$xl)
+			top: 5px
+			left: 5px
+	&__sale-text
+		font-weight: 900
+		font-size: 10px
+		line-height: 12px
+		color: var(--white)
+		position: relative
+		z-index: 2
+		@media(min-width:$md)
+			font-size: 14px
+			line-height: 17px
+	&__sale-bg
+		width: 100%
+		height: 100%
+		object-fit: contain
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		z-index: 1
+	&__label
+		padding: 5px
+		background-color: var(--purple)
+		border-radius: 7px
+		position: absolute
+		top: 37px
+		left: 2
+		@media(min-width:$md)
+			padding: 7px 12px
+			top: 15px
+			left: auto
+			right: 10px
+		@media(min-width:$xl)
+			top: 10px
+			right: 10px
+	&__label-ph-box
+		width: 16px
+		height: 16px
+		@media(min-width:$md)
+			display: none
+	&__label-ph
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__label-text
+		font-weight: 600
+		font-size: 12px
+		line-height: 16px
+		color: var(--white)
+	&__preview-btn
+		display: none
+		@media(min-width:$xl)
+			position: absolute
+			left: 50%
+			bottom: 7px
+			transform: translateX(-50%)
+			background-color: var(--green)
+			border-radius: 15px
+			width: 150px
+			height: 30px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: var(--white)
+			font-weight: 600
+			font-size: 12px
+			line-height: 16px
+			visibility: hidden
+			opacity: 0
+	&__name
+		& a
+			font-weight: 600
+			font-size: 10px
+			line-height: 15px
+			margin-top: 10px
+			@media(min-width:$md)
+				font-size: 14px
+				line-height: 20px
+				margin-top: 15px
+	&__footer
+		margin-top: 10px
+		@media(min-width:$md)
+			margin-top: 35px
+			display: flex
+			justify-content: space-between
+			align-items: center
+		@media(min-width:$xl)
+			margin-top: 15px
+	&__price
+		@media(min-width:$md)
+			display: flex
+			flex-direction: column
+			align-items: center
+		@media(min-width:$xl)
+			flex-direction: row
+			align-items: center
+	&__price-now
+		font-weight: 800
+		font-size: 14px
+		line-height: 17px
+		@media(min-width:$md)
+			font-size: 16px
+			line-height: 20px
+	&__price-old
+		font-size: 10px
+		line-height: 12px
+		color: var(--black50)
+		text-decoration-line: line-through
+		@media(min-width:$md)
+			font-size: 12px
+			line-height: 15px
+		@media(min-width:$xl)
+			margin-left: 7px
+	&__order
+		background-color: var(--green)
+		border-radius: 8px
+		width: 120px
+		height: 38px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 15px
+		@media(min-width:$md)
+			width: 45px
+			height: 45px
+			margin-top: 0
+	&__order-icon-box
+		display: none
+		@media(min-width:$md)
+			display: block
+			width: 22px
+			height: 22px
+	&__order-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__order-text
+		font-weight: 700
+		font-size: 12px
+		line-height: 145%
+		color: var(--white)
