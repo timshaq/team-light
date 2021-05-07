@@ -124,6 +124,28 @@
 			line-height: 16px
 			visibility: hidden
 			opacity: 0
+	&__wish
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 6px
+		right: 0
+		@media(min-width:$md)
+			width: 21px
+			height: 21px
+			top: auto
+			bottom: 10px
+			right: 10px
+		&.active
+			& .product-card__wish-icon
+				& path
+					fill: var(--red)
+	&__wish-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+		& path
+			fill: var(--black40)
 	&__name
 		& a
 			font-weight: 600
@@ -168,6 +190,8 @@
 			line-height: 15px
 		@media(min-width:$xl)
 			margin-left: 7px
+	&__order-box
+		position: relative
 	&__order
 		background-color: var(--green)
 		border-radius: 8px
@@ -177,10 +201,15 @@
 		justify-content: center
 		align-items: center
 		margin-top: 15px
+		z-index: 2
+		position: relative
 		@media(min-width:$md)
 			width: 45px
 			height: 45px
 			margin-top: 0
+		&:focus
+			& + .product-card__order-count
+				display: flex
 	&__order-icon-box
 		display: none
 		@media(min-width:$md)
@@ -196,3 +225,23 @@
 		font-size: 12px
 		line-height: 145%
 		color: var(--white)
+	&__order-count
+		width: 140px
+		height: 100%
+		z-index: 1
+		border-radius: 10px
+		background-color: var(--gray)
+		padding: 13px 60px 13px 14px
+		position: absolute
+		right: 0
+		top: 0
+		display: none
+		justify-content: space-between
+	&__order-count-input
+		width: 36px
+		display: block
+		background-color: transparent
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button
+			-webkit-appearance: none
+		text-align: center
