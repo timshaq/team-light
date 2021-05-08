@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+	<title>Избранное</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+</head>
+
+<body id="body">
+
+@@include('assets/html/header.html')
+
+<main>
+
+
+<ul class="breadscrumb fix-box">
+	<li class="breadscrumb-item">
+		<a href="#">Главная</a>
+	</li>
+	<li class="breadscrumb-item">
+		<a href="#">Профиль</a>
+	</li>
+	<li class="breadscrumb-item">
+		<a href="#">Избранное</a>
+	</li>
+</ul>
+
+
+
+
+<div class="fix-box">
+	<div class="cab-box">
+		<nav class="cab-nav">
+			<ul class="cab-nav__list">
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						Мои данные
+					</a>
+				</li>
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						Мои заказы
+					</a>
+				</li>
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						История заказов
+					</a>
+				</li>
+				
+				<li class="cab-nav__li active">
+					<a href="#" class="cab-nav__a">
+						Избранное
+					</a>
+				</li>
+				
+				<li class="cab-nav__li">
+					<a href="#" class="cab-nav__a">
+						Подписка
+					</a>
+				</li>
+				
+				<li class="cab-nav__li exit">
+					<a href="#" class="cab-nav__a">
+						Выход
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+
+		<section class="cab-content">
+			<h1 class="cab-content__title cab-title">
+				Избранное
+			</h1>
+
+			<div class="cab-content__wish-list">
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__made">
+						<span class="product-card__made-text">
+							Lightstar (Италия)
+						</span>
+					</div>
+					<div class="product-card__ph-box">
+						<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+						<div class="product-card__sale-box">
+							<div class="product-card__sale-text">
+								15%
+							</div>
+							<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+						</div>
+						<div class="product-card__label">
+							<div class="product-card__label-ph-box">
+								<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+							</div>
+							<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+						</div>
+						<button type="button" class="product-card__preview-btn">
+							Быстрый просмотр
+						</button>
+						<button type="button" class="product-card__wish active"
+						onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+						>
+							<svg class="product-card__wish-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 18.8292C10.0574 18.4462 9.83247 18.2289 7.46788 16.2181C2.97089 12.3939 0 9.86757 0 6.17933C0 2.87708 2.35434 0.169922 5.57812 0.169922C7.81532 0.169922 9.47531 1.54382 10.5 3.4928C11.5247 1.5439 13.1846 0.169922 15.4219 0.169922C18.6461 0.169922 21 2.87753 21 6.17933C21 9.86757 18.0291 12.394 13.5321 16.2181C11.1569 18.238 10.9625 18.4291 10.5 18.8292Z" fill="#EB5757"/>
+							</svg>
+
+						</button>
+					</div>
+					<h3 class="product-card__name">
+						<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+					</h3>
+					<div class="product-card__footer">
+						<div class="product-card__price">
+							<span class="product-card__price-now">
+								5 220 ₽
+							</span>
+							<span class="product-card__price-old">
+								9 800 ₽
+							</span>
+						</div>
+						<!--
+						при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+						эффект прекращается:
+						через 3 секунды после блура с карточки
+						при нажатии на кнопку из .product-card__order-box
+						-->
+						<button type="button" class="product-card__order fake-order-button">
+							<div class="product-card__order-icon-box">
+								<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+							</div>
+							<span class="product-card__order-text text-only-mob">В корзину</span>
+						</button>
+
+						<div class="product-card__order-box">
+							<button type="button" class="product-card__order d">
+								<div class="product-card__order-icon-box">
+									<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+								</div>
+								<span class="product-card__order-text text-only-mob">В корзину</span>
+							</button>
+
+							<div class="product-card__order-count">
+								<button type="button" class="num-input-down">-</button>
+
+								<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+								<button type="button" class="num-input-up">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+</main>
+
+@@include('assets/html/footer.html')
+
+</body>
+
+
+
+</html>
