@@ -1,36 +1,54 @@
 export default function () {
 
-
-	const breakpointMob = window.matchMedia('(min-width:767px)')
-
-	let bestestSlider;
-
-	const enableBestestSlider = function() {
-
-		bestestSlider = new Swiper('#bestestSlider', {
+	const indexHeroSlider = new Swiper('#indexHeroSlider', {
+			navigation: {
+				nextEl: '#indexHeroSliderNextBtn',
+				prevEl: '#indexHeroSliderPrevBtn',
+			},
 			pagination: {
-				el: '#bestestSliderPagination',
-				type: 'bullets',
-				clickable: false,
+				el: '#indexHeroSliderPagination',
+				type: 'fraction',
 			},
 			slidesPerView: 1,
 			spaceBetween: 10,
-			autoHeight: true,
 
 		})
 
-	}
+	const productLineNL = document.querySelectorAll('.product-line');
+	const productLineList = Array.prototype.slice.call(productLineNL);
 
-	const breakpointChecker = function() {
-		if(breakpointMob.matches === true) {
-			if(bestestSlider !== undefined) bestestSlider.destroy(true,true);
-			return;
-		} else if (breakpointMob.matches === false) {
-			return enableBestestSlider();
-		}
-	}
-	breakpointMob.addListener(breakpointChecker);
-	breakpointChecker();
+	productLineList.forEach(line => {
+		const btnPrev = line.querySelector('.section-header__btn.prev');
+		const btnNext = line.querySelector('.section-header__btn.next');
+		const slider = line.querySelector('.swiper-container');
+
+		const lineSlider = new Swiper(slider, {
+			navigation: {
+				nextEl: btnNext,
+				prevEl: btnPrev,
+			},
+			watchOverflow: true,
+			breakpoints: {
+				320: {
+					slidesPerView: 1.5,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 30,
+				},
+				1200: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+
+		})
+	})
+
+
+
+
 
 
 

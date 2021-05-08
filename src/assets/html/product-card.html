@@ -1,0 +1,75 @@
+<div class="product-line__item product-card">
+	<div class="product-card__made">
+		<span class="product-card__made-text">
+			Lightstar (Италия)
+		</span>
+	</div>
+	<div class="product-card__ph-box">
+		<img src="assets/img/prod-card_01.png" alt="" class="product-card__ph">
+		<div class="product-card__sale-box">
+			<div class="product-card__sale-text">
+				15%
+			</div>
+			<img src="assets/img/sale-bg.svg" class="product-card__sale-bg">
+		</div>
+		<div class="product-card__label">
+			<div class="product-card__label-ph-box">
+				<img src="assets/img/gift.svg" alt="" class="product-card__label-ph">
+			</div>
+			<span class="product-card__label-text text-mob-hidden">Подарок!</span>
+		</div>
+		<button type="button" class="product-card__preview-btn">
+			Быстрый просмотр
+		</button>
+		<button type="button" class="product-card__wish"
+		onclick="(this.classList.contains('active')) ? this.classList.remove('active') : this.classList.add('active')" 
+		>
+			<svg class="product-card__wish-icon" width="20" height="18" viewBox="0 0 20 18" fill="none">
+			<path d="M10 17.8855C9.57844 17.5208 9.36426 17.3137 7.11227 15.3987C2.82941 11.7567 0 9.3506 0 5.83799C0 2.69299 2.24223 0.114746 5.3125 0.114746C7.44316 0.114746 9.0241 1.42322 10 3.27939C10.9759 1.4233 12.5568 0.114746 14.6875 0.114746C17.7582 0.114746 20 2.69342 20 5.83799C20 9.3506 17.1705 11.7567 12.8877 15.3987C10.6256 17.3224 10.4405 17.5044 10 17.8855ZM5.3125 1.28662C2.95195 1.28662 1.17188 3.2433 1.17188 5.83799C1.17188 8.80881 3.83711 11.0753 7.87141 14.506C8.555 15.0873 9.25848 15.6855 10 16.3296C10.7415 15.6855 11.4449 15.0873 12.1285 14.506C16.1629 11.0753 18.8281 8.80885 18.8281 5.83799C18.8281 3.24326 17.048 1.28662 14.6875 1.28662C12.5561 1.28662 11.0543 3.19744 10.5648 4.9583L10.5641 4.96076C9.96996 4.95971 10.0295 4.95978 9.43535 4.95873L9.43523 4.9583C9.00293 3.4033 7.60094 1.28662 5.3125 1.28662V1.28662Z" fill="#212121"/>
+			</svg>
+		</button>
+	</div>
+	<h3 class="product-card__name">
+		<a href="#">Торшер ST Luce Menola SLE302.405.01</a>
+	</h3>
+	<div class="product-card__footer">
+		<div class="product-card__price">
+			<span class="product-card__price-now">
+				5 220 ₽
+			</span>
+			<span class="product-card__price-old">
+				9 800 ₽
+			</span>
+		</div>
+		<!--
+		при нажатии на эту кнопку, она исчезает и показывается блок ниже .product-card__order-box
+		эффект прекращается:
+		через 3 секунды после блура с карточки
+		при нажатии на кнопку из .product-card__order-box
+		-->
+		<button type="button" class="product-card__order fake-order-button">
+			<div class="product-card__order-icon-box">
+				<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+			</div>
+			<span class="product-card__order-text text-only-mob">В корзину</span>
+		</button>
+
+		<div class="product-card__order-box">
+			<button type="button" class="product-card__order d">
+				<div class="product-card__order-icon-box">
+					<img src="assets/img/cart-btn.svg" alt="" class="product-card__order-icon">
+				</div>
+				<span class="product-card__order-text text-only-mob">В корзину</span>
+			</button>
+
+			<div class="product-card__order-count">
+				<button type="button" class="num-input-down">-</button>
+
+				<input class="product-card__order-count-input" value="1" name="floors" min="1" type="number">
+
+				<button type="button" class="num-input-up">+</button>
+			</div>
+		</div>
+
+	</div>
+</div>

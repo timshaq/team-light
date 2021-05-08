@@ -1,15 +1,21 @@
 "use strict";
 
 import sliders from './sliders.js';
+import bestestSlider from './bestestSlider.js';
+import recommendMobSlider from './recommendMobSlider.js';
 import yamap from './yamap.js';
 import blogLineFeed from './blogLineFeed.js';
 import cabToggler from './cabToggler.js';
+import prodCardOrderToggler from './prodCardOrderToggler.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
 	var header = document.getElementById('header');
 
 	sliders();
+	bestestSlider();
+	recommendMobSlider();
+	prodCardOrderToggler();
 	yamap();
 	blogLineFeed();
 	cabToggler();
