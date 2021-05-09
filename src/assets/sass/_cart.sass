@@ -1,0 +1,320 @@
+.cart-info
+	&__free-delivery
+
+.free-delivery
+	display: none
+	@media(min-width:$xl)
+		display: block
+		padding: 20px
+		margin-top: 50px
+	&__header
+		display: flex
+		align-items: center
+	&__icon-box
+		width: 35px
+		height: 30px
+	&__icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__title
+		font-weight: 600
+		font-size: 16px
+		line-height: 20px
+		margin-left: 13px
+	&__subtitle
+		padding-top: 25px
+		border-top: 1px solid var(--black15)
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		margin-top: 20px
+		&.flex-column
+			display: flex
+			flex-direction: column
+			& .remains
+				display: block
+				margin-top: 15px
+				font-weight: 600
+.cart
+	@media(min-width:$xl)
+		display: flex
+		justify-content: space-between
+		& .cart-info
+			width: 270px
+	&__content
+		margin-top: 15px
+		@media(min-width:$md)
+			margin-top: 20px
+		@media(min-width:$xl)
+			width: 870px
+			margin-top: 50px
+	&__promo
+		background-color: var(--gray)
+		padding: 10px 15px
+		margin-bottom: 95px
+		position: relative
+		transform: translateX(-15px)
+		width: 320px
+		@media(min-width:$md)
+			width: 100%
+			transform: none
+			padding: 10px 25px 10px 10px
+			margin-bottom: 100px
+			display: flex
+			justify-content: space-between
+			align-items: center
+		@media(min-width:$xl)
+			padding: 15px 30px 15px 15px
+	&__promo-label
+		width: 290px
+		height: 40px
+		background-color: var(--white)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media(min-width:$md)
+			width: 354px
+			height: 48px
+	&__promo-input
+		width: 250px
+		height: 100%
+		padding: 10px
+		background-color: transparent
+		font-size: 14px
+		line-height: 20px
+		@media(min-width:$md)
+			width: 306px
+			padding: 14px
+	&__promo-submit
+		width: 40px
+		height: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--green)
+		border-radius: 8px
+		@media(min-width:$md)
+			width: 48px
+			height: 48px
+	&__promo-submit-icon
+		width: 7px
+		height: 14px
+		object-fit: contain
+	&__promo-delete
+		display: none
+		@media(min-width:$md)
+			display: block
+			font-weight: 500
+			font-size: 14px
+			line-height: 20px
+	&__promo-status
+		position: absolute
+		left: 15px
+		transform: translateY(100%)
+		&.success
+			bottom: -15px
+		&.error
+			bottom: -50px
+			display: flex
+			align-items: center
+	&__promo-error-trash
+		width: 20px
+		height: 20px
+		margin-left: 15px
+	&__promo-error-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.cart
+	&__list
+
+	&__li
+		& + .cart__li
+			margin-top: 15px
+			@media(min-width:$md)
+				margin-top: 30px
+
+	&__product-card
+
+.cart-product-card
+	position: relative
+	box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+	border-radius: 5px
+	padding: 20px
+	@media(min-width:$md)
+		display: flex
+		flex-wrap: wrap
+	&__ph-box
+		width: 100%
+		height: 240px
+		@media(min-width:$md)
+			width: 120px
+			height: 120px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__md-merge
+		@media(min-width:$md)
+			margin-left: 30px
+			max-width: 440px
+		@media(min-width:$xl)
+			margin-left: 0
+			max-width: none
+			display: flex
+	&__text
+		position: relative
+		@media(min-width:$xl)
+			width: 230px
+			margin-left: 30px
+	&__props
+		display: flex
+		justify-content: space-between
+		@media(min-width:$md)
+			display: block
+	&__props-text
+		font-size: 12px
+		line-height: 17px
+		color: var(--black50)
+		&_black
+			color: var(--black)
+		&.articul
+			@media(min-width:$xl)
+				position: absolute
+				bottom: 0
+				left: 0
+	&__name
+		&-a
+			display: block
+			font-weight: bold
+			font-size: 16px
+			line-height: 23px
+			margin-top: 10px
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			-webkit-line-clamp: 2
+			@media(min-width:$md)
+				-webkit-line-clamp: 1
+				max-width: 100%
+			@media(min-width:$xl)
+				-webkit-line-clamp: 2
+	&__nums
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+		@media(min-width:$md)
+			flex-direction: row
+			align-items: center
+		@media(min-width:$xl)
+			margin-left: 70px
+	&__input-box
+		width: 150px
+		order: 2
+		margin-top: 15px
+		border-radius: 10px
+		background-color: var(--gray)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 14px
+		@media(min-width:$md)
+			width: 100px
+			order: 0
+			margin-top: 0
+	&__input-btn,
+	&__input
+		font-weight: 500
+		font-size: 14px
+		line-height: 145%
+		color: var(--black50)
+	&__input-btn
+		width: 11px
+		height: 20px
+	&__input
+		background-color: transparent
+		width: 38px
+		text-align: center
+	&__price-box
+		display: flex
+		flex-direction: column
+		@media(min-width:$md)
+			flex-direction: row
+			align-items: center
+		@media(min-width:$xl)
+			width: 170px
+			flex-direction: column
+			position: relative
+			margin-left: 30px
+	&__price
+		&.current
+			font-weight: 800
+			font-size: 20px
+			line-height: 24px
+			@media(min-width:$md)
+				font-size: 22px
+				line-height: 27px
+				margin-left: 40px
+			@media(min-width:$xl)
+				margin-top: 5px
+				margin-left: 0
+		&.old
+			font-size: 14px
+			line-height: 17px
+			color: var(--black50)
+			text-decoration-line: line-through
+			margin-top: 5px
+			@media(min-width:$md)
+				font-size: 16px
+				line-height: 20px
+				margin-left: 5px
+				margin-top: 0
+			@media(min-width:$xl)
+				order: -1
+				margin-left: 0
+		&.econom
+			display: none
+			@media(min-width:$md)
+				display: block
+				font-weight: 500
+				font-size: 14px
+				line-height: 17px
+				color: var(--green)
+				margin-left: 25px
+			@media(min-width:$xl)
+				margin-top: 10px
+				margin-left: 0
+	&__delete-btn
+		width: 20px
+		height: 24px
+		position: absolute
+		bottom: 32px
+		right: 15px
+		@media(min-width:$md)
+			bottom: auto
+			top: 50%
+			transform: translateY(-50%)
+	&__delete-btn-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__sale
+		padding: 5px 11px
+		background-color: var(--red)
+		display: flex
+		justify-content: center
+		align-items: center
+		color: var(--white)
+		font-weight: 700
+		border-radius: 5px
+		position: absolute
+		top: 20px
+		left: 20px
+		@media(min-width:$xl)
+			top: 0
+			left: auto
+			right: 0
+			transform: translateY(-100%)

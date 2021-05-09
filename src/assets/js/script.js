@@ -3,6 +3,7 @@
 import sliders from './sliders.js';
 import bestestSlider from './bestestSlider.js';
 import recommendMobSlider from './recommendMobSlider.js';
+import calcInputs from './calcInputs.js';
 import yamap from './yamap.js';
 import blogLineFeed from './blogLineFeed.js';
 import cabToggler from './cabToggler.js';
@@ -19,5 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	yamap();
 	blogLineFeed();
 	cabToggler();
+	calcInputs();
 
 });

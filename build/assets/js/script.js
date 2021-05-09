@@ -299,6 +299,22 @@
   },
 
   /***/
+  "./src/assets/js/calcInputs.js":
+  /*!*************************************!*\
+    !*** ./src/assets/js/calcInputs.js ***!
+    \*************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst calcInputsBoxNL = document.querySelectorAll('.input-calc')\r\n\tconst calcInputsBoxList = Array.prototype.slice.call(calcInputsBoxNL);\r\n\r\n\tcalcInputsBoxList.forEach(box => {\r\n\t\tconst btnDown = box.querySelector('button.minus')\r\n\t\tconst btnUp = box.querySelector('button.plus')\r\n\t\tconst input = box.querySelector('input')\r\n\t\tbtnDown.addEventListener('click', () => input.stepDown());\r\n\t\tbtnUp.addEventListener('click', () => input.stepUp());\r\n\t})\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/calcInputs.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/prodCardOrderToggler.js":
   /*!***********************************************!*\
     !*** ./src/assets/js/prodCardOrderToggler.js ***!
@@ -342,7 +358,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _bestestSlider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bestestSlider.js */ \"./src/assets/js/bestestSlider.js\");\n/* harmony import */ var _recommendMobSlider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./recommendMobSlider.js */ \"./src/assets/js/recommendMobSlider.js\");\n/* harmony import */ var _yamap_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./yamap.js */ \"./src/assets/js/yamap.js\");\n/* harmony import */ var _blogLineFeed_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blogLineFeed.js */ \"./src/assets/js/blogLineFeed.js\");\n/* harmony import */ var _cabToggler_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cabToggler.js */ \"./src/assets/js/cabToggler.js\");\n/* harmony import */ var _prodCardOrderToggler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./prodCardOrderToggler.js */ \"./src/assets/js/prodCardOrderToggler.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_bestestSlider_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_recommendMobSlider_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_prodCardOrderToggler_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\n\tObject(_yamap_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\tObject(_blogLineFeed_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\tObject(_cabToggler_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _bestestSlider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bestestSlider.js */ \"./src/assets/js/bestestSlider.js\");\n/* harmony import */ var _recommendMobSlider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./recommendMobSlider.js */ \"./src/assets/js/recommendMobSlider.js\");\n/* harmony import */ var _calcInputs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./calcInputs.js */ \"./src/assets/js/calcInputs.js\");\n/* harmony import */ var _yamap_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./yamap.js */ \"./src/assets/js/yamap.js\");\n/* harmony import */ var _blogLineFeed_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blogLineFeed.js */ \"./src/assets/js/blogLineFeed.js\");\n/* harmony import */ var _cabToggler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cabToggler.js */ \"./src/assets/js/cabToggler.js\");\n/* harmony import */ var _prodCardOrderToggler_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./prodCardOrderToggler.js */ \"./src/assets/js/prodCardOrderToggler.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_bestestSlider_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_recommendMobSlider_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_prodCardOrderToggler_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\r\n\tObject(_yamap_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\tObject(_blogLineFeed_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\r\n\tObject(_cabToggler_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\n\tObject(_calcInputs_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -380,15 +396,15 @@
 
   /***/
   0:
-  /*!************************************************************************************************************************************************************************************************************************************************************************!*\
-    !*** multi ./src/assets/js/bestestSlider.js ./src/assets/js/blogLineFeed.js ./src/assets/js/cabToggler.js ./src/assets/js/prodCardOrderToggler.js ./src/assets/js/recommendMobSlider.js ./src/assets/js/script.js ./src/assets/js/sliders.js ./src/assets/js/yamap.js ***!
-    \************************************************************************************************************************************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+    !*** multi ./src/assets/js/bestestSlider.js ./src/assets/js/blogLineFeed.js ./src/assets/js/cabToggler.js ./src/assets/js/calcInputs.js ./src/assets/js/prodCardOrderToggler.js ./src/assets/js/recommendMobSlider.js ./src/assets/js/script.js ./src/assets/js/sliders.js ./src/assets/js/yamap.js ***!
+    \******************************************************************************************************************************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\bestestSlider.js */\"./src/assets/js/bestestSlider.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\blogLineFeed.js */\"./src/assets/js/blogLineFeed.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\cabToggler.js */\"./src/assets/js/cabToggler.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\prodCardOrderToggler.js */\"./src/assets/js/prodCardOrderToggler.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\recommendMobSlider.js */\"./src/assets/js/recommendMobSlider.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\yamap.js */\"./src/assets/js/yamap.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/bestestSlider.js_./src/assets/js/blogLineFeed.js_./src/assets/js/cabToggler.js_./src/assets/js/prodCardOrderToggler.js_./src/assets/js/recommendMobSlider.js_./src/assets/js/script.js_./src/assets/js/sliders.js_./src/assets/js/yamap.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\bestestSlider.js */\"./src/assets/js/bestestSlider.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\blogLineFeed.js */\"./src/assets/js/blogLineFeed.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\cabToggler.js */\"./src/assets/js/cabToggler.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\calcInputs.js */\"./src/assets/js/calcInputs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\prodCardOrderToggler.js */\"./src/assets/js/prodCardOrderToggler.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\recommendMobSlider.js */\"./src/assets/js/recommendMobSlider.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\team-light\\src\\assets\\js\\yamap.js */\"./src/assets/js/yamap.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/bestestSlider.js_./src/assets/js/blogLineFeed.js_./src/assets/js/cabToggler.js_./src/assets/js/calcInputs.js_./src/assets/js/prodCardOrderToggler.js_./src/assets/js/recommendMobSlider.js_./src/assets/js/script.js_./src/assets/js/sliders.js_./src/assets/js/yamap.js?");
     /***/
   }
   /******/
