@@ -538,5 +538,52 @@
 		grid-template-columns: repeat(3,1fr)
 		margin-top: 20px
 	& .product-card
-		width: 100%
-		display: flex
+		@media(max-width:767px)
+			width: 100%
+			display: flex
+			& .product-card__ph-box
+				width: 90px
+				height: 142px
+				position: static
+			& .cab-content__wish-list-txt-box
+				width: 165px
+				display: flex
+				flex-direction: column
+				padding-top: 20px
+			& .product-card__wish
+				right: auto
+				left: 15px
+				bottom: 15px
+				top: auto
+			& .product-card__order-icon-box
+				display: flex
+			& .product-card__footer
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-top: auto
+			& .product-card__price
+				display: flex
+				flex-direction: column
+				align-items: center
+			& .product-card__order
+				width: 40px
+				height: 40px
+				margin-top: 0
+			& .product-card__label
+				right: 6px
+				top: 0
+				transform: translateY(-50%)
+			& .product-card__sale-box
+				left: 10px
+				top: 15px
+			& .product-card__made
+				display: block
+				position: absolute
+				top: 15px
+				padding-left: 105px
+				white-space: nowrap
+				width: 265px
+				overflow: hidden
+				text-overflow: ellipsis
+			& .product-card__name
