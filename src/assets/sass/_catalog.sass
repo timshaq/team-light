@@ -1,0 +1,154 @@
+.catalog
+	@media(min-width:$xl)
+		display: flex
+		justify-content: space-between
+	&__filter
+		@media(min-width:$xl)
+			width: 270px
+	&__content
+		@media(min-width:$xl)
+			width: 870px
+	&__categories
+	&__pagination
+	&__list
+		display: grid
+		grid-gap: 10px
+		grid-template-columns: repeat(2,1fr)
+		@media(min-width:$md)
+			grid-template-columns: repeat(3,1fr)
+			grid-gap: 30px
+.catalog
+	&__section
+		margin: 40px 0
+		@media(min-width:$md)
+			margin: 60px 0
+	&__section-title
+		font-weight: bold
+		font-size: 18px
+		line-height: 26px
+		@media(min-width:$md)
+			font-size: 22px
+			line-height: 32px
+		@media(min-width:$xl)
+			font-weight: 800
+			font-size: 26px
+			line-height: 38px
+	&__section-p
+		font-size: 14px
+		line-height: 26px
+		color: var(--black60)
+		margin: 10px 0
+		@media(min-width:$md)
+			margin: 15px 0
+		@media(min-width:$xl)
+			margin: 20px 0
+	&__helper-subtitle
+		font-size: 14px
+		line-height: 20px
+		color: var(--black60)
+		margin-top: 10px
+		@media(min-width:$md)
+			line-height: 26px
+			margin-top: 7px
+	&__helper-lists
+		display: flex
+		justify-content: space-between
+		margin-top: 20px
+		@media(min-width:$xl)
+			margin-top: 30px
+	&__helper-list
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 50%
+		@media(min-width:$md)
+			width: 100%
+		&:nth-child(1)
+			& .catalog__helper-li,
+			& .catalog__helper-li-header
+				justify-content: flex-start
+		&:nth-child(2)
+			& .catalog__helper-li,
+			& .catalog__helper-li-header
+				justify-content: flex-end
+			@media(min-width:$md)
+				& .catalog__helper-li,
+				& .catalog__helper-li-header
+					justify-content: center
+		&:nth-child(3)
+			display: none
+			@media(min-width:$md)
+				display: block
+				& .catalog__helper-li,
+				& .catalog__helper-li-header
+					justify-content: flex-end
+	&__helper-li
+		width: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		height: 40px
+		&:nth-child(2n+1)
+			background-color: var(--gray)
+	&__helper-li-header
+		width: 100%
+		display: flex
+		justify-content: flex-start
+	&__helper-title
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		width: 140px
+		height: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--green)
+		color: var(--white)
+		@media(min-width:$md)
+			font-size: 18px
+			line-height: 26px
+			width: 216px
+			height: 50px
+		@media(min-width:$xl)
+			width: 270px
+		& .text-mob-tab-hidden
+			display: none
+			@media(min-width:$xl)
+				display: inline
+				color: inherit
+				margin-left: 7px
+	&__helper-subtitle
+
+	&__helper-a
+		display: block
+		text-align: center
+		font-size: 14px
+		line-height: 26px
+		color: var(--black50)
+		&:hover
+			color: var(--green)
+		width: 140px
+		@media(min-width:$md)
+			width: 216px
+		@media(min-width:$xl)
+			width: 270px
+
+.catalog__content
+	& .popular-brands__list
+		@media(min-width:$md)
+			width: 820px
+		@media(min-width:$xl)
+			width: 100%
+	& .popular-brands__item
+		width: 110px
+		height: 80px
+		@media(min-width:$md)
+			width: 120px
+			height: 100px
+	& .popular-brands__ph-box
+		width: 60px
+		height: 60px
+		@media(min-width:$md)
+			width: 76px
+			height: 76px
