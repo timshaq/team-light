@@ -1,0 +1,33 @@
+.product-page
+	&__tabs
+		display: none
+		@media(min-width:$md)
+			display: block
+			overflow-x: auto
+			background-color: var(--gray)
+			border-radius: 10px
+	&__tabs-box
+		@media(min-width:$md)
+			display: flex
+			padding: 10px
+			white-space: nowrap
+	&__tab
+		font-weight: 500
+		font-size: 13px
+		line-height: 19px
+		padding: 12px 20px
+		& + .product-page__tab
+			margin-left: 10px
+		&.active
+			position: relative
+			color: var(--green)
+			&:before
+				content: ''
+				width: 50px
+				height: 5px
+				border-radius: 3px 3px 0px 0px
+				background-color: var(--green)
+				position: absolute
+				bottom: -10px
+				left: 50%
+				transform: translateX(-50%)

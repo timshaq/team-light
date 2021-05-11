@@ -1,5 +1,9 @@
 .catalog
+	margin-top: 15px
+	@media(min-width:$md)
+		margin-top: 20px
 	@media(min-width:$xl)
+		margin-top: 30px
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
@@ -331,6 +335,10 @@
 	&__filter-form
 
 .catalog-filter-form
+	padding-bottom: 30px
+	display: none
+	@media(min-width:$xl)
+		display: block
 	&__fieldset
 		padding-bottom: 20px
 		& + .catalog-filter-form__fieldset
@@ -382,16 +390,209 @@
 		line-height: 20px
 		margin-top: 20px
 	&__submit
-
+		width: 240px
+		margin-right: auto
+		margin-left: auto
+		margin-top: 30px
+		@media(min-width:$md)
+			width: 272px
+			margin-top: 40px
+		@media(min-width:$xl)
+			width: 100%
 	&__reset
-
+		width: 164px
+		margin-right: auto
+		margin-left: auto
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 20px
 	&__reset-icon
+		width: 21px
+		height: 21px
+		object-fit: contain
+.catalog-header
+	&__controls-box
+		display: flex
+		align-items: center
+		height: 50px
+		position: relative
+		margin-top: 65px
+		@media(min-width:$md)
+			display: flex
+			align-items: center
+	&__controls
+		background-color: var(--gray-dark)
+	&__count
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: var(--black60)
+	&__sort
+		@media(min-width:$md)
+			margin-right: 15px
+			margin-left: auto
+	&__sort-txt
 
-.label-checkbox
-
-.green-color
-
-.btn-green
-
-.red-color
-
+	&__sort-select
+		font-weight: 500
+		font-size: 12px
+		line-height: 18px
+		position: absolute
+		top: -10px
+		left: 0
+		transform: translateY(-100%)
+		width: 170px
+		height: 40px
+		background-color: var(--gray)
+		@media(min-width:$md)
+			position: static
+			transform: none
+			background-color: transparent
+			font-size: 14px
+			line-height: 20px
+		& option
+			color: var(--black60)
+	&__filter-btn
+		width: 110px
+		height: 40px
+		background-color: var(--black)
+		display: flex
+		justify-content: center
+		align-items: center
+		color: var(--white)
+		font-weight: 500
+		font-size: 12px
+		line-height: 18px
+		position: absolute
+		top: -10px
+		right: 0
+		transform: translateY(-100%)
+		@media(min-width:$md)
+			position: static
+			transform: none
+			width: 140px
+			height: 50px
+			font-size: 14px
+			line-height: 20px
+		@media(min-width:$xl)
+			display: none
+	&__filter-btn-icon
+		margin-right: 10px
+		width: 18px
+		height: 18px
+		object-fit: contain
+.catalog-header
+	&__tags
+		padding: 10px 0
+		background-color: var(--gray-light)
+		@media(min-width:$md)
+			padding: 15px 0
+	&__tags-box
+		display: flex
+		white-space: nowrap
+	&__tags-btn
+		min-width: 38px
+		min-height: 38px
+		width: 38px
+		height: 38px
+		border-radius: 100%
+		background-color: var(--red)
+		display: flex
+		justify-content: center
+		align-items: center
+		color: var(--white)
+		margin-right: 10px
+		@media(min-width:$md)
+			padding: 10px 20px
+			min-width: 130px
+			width: auto
+			height: auto
+			border-radius: 24px
+		@media(min-width:$xl)
+			order: 2
+			margin-left: 10px
+			margin-right: 0
+	&__tags-btn-icon
+		width: 14px
+		height: 14px
+		object-fit: contain
+		@media(min-width:$md)
+			display: none
+	&__tags-list
+		display: flex
+		overflow-x: scroll
+		@media(min-width:$xl)
+			order: 1
+	&__tags-li
+		padding: 9px 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 25px
+		border: 1px solid var(--black50)
+		& + .catalog-header__tags-li
+			margin-left: 10px
+	&__tags-name
+		color: var(--black50)
+	&__tags-value
+		color: var(--black50)
+		@media(min-width:$md)
+			color: var(--black)
+			margin-left: 5px
+	&__tags-delete
+		margin-left: 15px
+		width: 12px
+		height: 12px
+.catalog
+	&__categories
+		display: flex
+		white-space: nowrap
+		overflow-x: auto
+		margin-bottom: 30px
+	&__categories-li
+		padding: 14px
+		border: 1px solid var(--black10)
+		display: flex
+		align-items: center
+		min-width: 170px
+		& + .catalog__categories-li
+			margin-left: 20px
+	&__categories-icon
+		width: 32px
+		height: 32px
+		object-fit: contain
+		margin-right: 15px
+	&__categories-text
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		max-width: 97px
+		overflow: hidden
+		text-overflow: ellipsis
+.catalog-header
+	&__first
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__first-list
+		display: none
+		@media(min-width:$md)
+			display: flex
+	&__first-list-item
+		@media(min-width:$md)
+			padding: 9px 15px
+			background-color: var(--green)
+			color: var(--white)
+			border-radius: 4px
+			font-weight: 600
+			font-size: 13px
+			line-height: 16px
+			& + .catalog-header__first-list-item
+				margin-left: 10px
+			&:hover
+				background-color: var(--green-dark)
+			&:nth-child(n+4)
+				display: none
+				@media(min-width:$xl)
+					display: block

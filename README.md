@@ -2,6 +2,8 @@
 
 ## HTML naming
 1. Главная — index.html
+1. Каталог — catalog.html
+1. Карточка товара — product.html
 1. Корзина — cart.html
 1. Оформление заказа — order.html
 1. Новости — feed.html
