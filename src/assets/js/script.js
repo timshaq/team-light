@@ -8,6 +8,8 @@ import yamap from './yamap.js';
 import blogLineFeed from './blogLineFeed.js';
 import cabToggler from './cabToggler.js';
 import prodCardOrderToggler from './prodCardOrderToggler.js';
+import catalog from './catalog.js';
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -21,5 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	blogLineFeed();
 	cabToggler();
 	calcInputs();
+	catalog();
 
 });

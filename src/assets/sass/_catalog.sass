@@ -2,6 +2,7 @@
 	@media(min-width:$xl)
 		display: flex
 		justify-content: space-between
+		align-items: flex-start
 	&__filter
 		@media(min-width:$xl)
 			width: 270px
@@ -152,3 +153,245 @@
 		@media(min-width:$md)
 			width: 76px
 			height: 76px
+.catalog
+	&__pagination
+		margin-top: 20px
+		@media(min-width:$md)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-top: 30px
+	&__pagination-count
+		display: none
+		@media(min-width:$md)
+			display: block
+			font-size: 14px
+			line-height: 20px
+			color: var(--black50)
+	&__pagination-controls
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__pagination-btn
+		width: 41px
+		height: 41px
+		border-radius: 10px
+		border: 1px solid var(--black10)
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: not-allowed
+		& svg
+			width: 5px
+			height: 10px
+			& path
+				stroke: var(--black50)
+		&.prev
+		&.next
+			& svg
+				width: 5px
+				height: 10px
+				transform: scale(-1,1)
+		&.active
+			border: none
+			cursor: pointer
+			& svg
+				& path
+					stroke: var(--green)
+	&__pagination-pages
+		display: grid
+		grid-gap: 9px
+		grid-template-columns: repeat(4,1fr)
+		margin: 0 9px
+		@media(min-width:$md)
+			grid-gap: 10px
+			grid-template-columns: repeat(7,1fr)
+			margin: 0 20px
+	&__pagination-page
+		&:nth-child(3),
+		&:nth-child(5),
+		&:last-child
+			display: none
+			@media(min-width:$md)
+				display: block
+		&.current
+			& .catalog__pagination-a
+				color: var(--green)
+	&__pagination-a
+		font-size: 16px
+		&:hover
+			color: var(--green)
+	&__pagination-separator
+		font-size: 16px
+
+
+
+
+
+.catalog
+	&__filter
+
+	&__filter-promo
+		display: none
+		@media(min-width:$xl)
+			display: block
+.filter-promo
+	@media(min-width:$xl)
+		&__banner-box
+			width: 100%
+			height: 440px
+			display: block
+		&__banner
+			width: 100%
+			height: 100%
+			object-fit: contain
+		&__item
+			& + .filter-promo__item
+				margin-top: 30px
+		&__item-header
+			font-weight: bold
+			font-size: 18px
+			line-height: 26px
+			color: var(--white)
+			padding: 17px 20px
+			background-color: var(--green)
+		&__item-article
+			padding: 10px 10px 15px
+			display: flex
+			flex-direction: column
+			align-items: center
+			border-width: 0 1px 1px 1px
+			border-style: solid
+			border-color: var(--black10)
+.filter-promo-review
+	@media(min-width:$xl)
+		&__ph-box
+			width: 110px
+			height: 110px
+			border: 100%
+			overflow: hidden
+			margin-top: 10px
+		&__ph
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&__name
+			font-weight: 700
+			font-size: 16px
+			line-height:  23px
+			margin-top: 15px
+			text-align: center
+		&__rating
+			width: 103px
+			height: 15px
+			margin-top: 10px
+		&__rating-img
+			width: 100%
+			height: 100%
+			object-fit: contain
+		&__p
+			font-size: 14px
+			color: var(--black50)
+			margin-top: 10px
+			text-align: center
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			-webkit-line-clamp: 5
+			line-height: 26px
+		&__a
+			font-weight: 700
+			font-size: 14px
+			line-height: 20px
+			margin-top: 15px
+			color: var(--green)
+.filter-promo-article
+	&__ph-box
+		width: 250px
+		height: 170px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__title
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		margin-top: 10px
+		text-align: center
+	&__a
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		color: var(--green)
+		margin-top: 10px
+.catalog
+	&__filter-form
+
+.catalog-filter-form
+	&__fieldset
+		padding-bottom: 20px
+		& + .catalog-filter-form__fieldset
+			& .catalog-filter-form__fieldset-legend
+				padding-top: 20px
+				border-top: 1px solid var(--black10)
+			&.active
+				& .catalog-filter-form__fieldset-legend
+					padding-top: 30px
+					border-top: 1px solid var(--black10)
+		&.active
+			padding-bottom: 30px
+			& .catalog-filter-form__fieldset-content
+				display: block
+			& .catalog-filter-form__fieldset-toggler
+				transform: none
+	&__fieldset-legend
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		cursor: pointer
+	&__fieldset-title
+		font-weight: 600
+		font-size: 16px
+		line-height: 29px
+	&__fieldset-toggler
+		transform: scale(1,-1)
+		width: 12px
+		height: 6px
+		object-fit: contain
+	&__fieldset-content
+		display: none
+		&.open
+			& .catalog-filter-form__fieldset-li
+				margin: 20px 0
+				&:nth-child(n+4)
+					display: block
+	&__fieldset-ul
+		margin-top: 20px
+	&__fieldset-li
+		& +  .catalog-filter-form__fieldset-li
+			margin-top: 20px
+		&:nth-child(n+4)
+			display: none
+	&__fieldset-more
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		margin-top: 20px
+	&__submit
+
+	&__reset
+
+	&__reset-icon
+
+.label-checkbox
+
+.green-color
+
+.btn-green
+
+.red-color
+
