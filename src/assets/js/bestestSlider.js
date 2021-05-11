@@ -1,12 +1,15 @@
 export default function () {
 
+	const sliderEl = document.getElementById('bestestSlider');
+	if(!sliderEl) return
+
 	const breakpointMob = window.matchMedia('(min-width:768px)')
 
 	let bestestSlider;
 
 	const enableBestestSlider = function() {
 
-		bestestSlider = new Swiper('#bestestSlider', {
+		bestestSlider = new Swiper(sliderEl, {
 			pagination: {
 				el: '#bestestSliderPagination',
 				type: 'bullets',

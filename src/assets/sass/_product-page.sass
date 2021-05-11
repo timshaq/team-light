@@ -18,6 +18,8 @@
 		padding: 12px 20px
 		& + .product-page__tab
 			margin-left: 10px
+		&:hover
+			color: var(--green)
 		&.active
 			position: relative
 			color: var(--green)
@@ -31,3 +33,254 @@
 				bottom: -10px
 				left: 50%
 				transform: translateX(-50%)
+.product-page
+	&__drop-down-list
+
+	&__drop-down
+
+.product-drop-down
+	margin: 20px 0
+	@media(min-width:$md)
+	 margin: 0
+	&.open
+		& .product-drop-down__content
+			display: block
+		& .product-drop-down__header-icon
+			transform: translateY(-50%) scale(1,-1)
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-radius: 10px
+		background-color: var(--gray)
+		padding: 15px 32px 15px
+		position: relative
+		@media(min-width:$md)
+			display: none
+	&__header-text
+		font-weight: 500
+		font-size: 13px
+		line-height: 19px
+	&__header-icon
+		width: 12px
+		height: 6px
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translateY(-50%)
+	&__content
+		display: none
+		margin-top: 30px
+	&__title
+		font-weight: 600
+		font-size: 18px
+		line-height: 26px
+		@media(min-width:$md)
+			font-size: 20px
+			line-height: 29px
+		@media(min-width:$xl)
+			font-size: 24px
+			line-height: 35px
+	&__subtitle
+		font-weight: 700
+		font-size: 16px
+		line-height: 23px
+		margin: 15px 0
+		@media(min-width:$md)
+			margin: 20px 0
+		@media(min-width:$xl)
+			font-size: 18px
+			line-height: 26px
+	&__p
+		font-size: 14px
+		line-height: 26px
+		color: var(--black60)
+		margin: 10px 0
+		@media(min-width:$md)
+			margin: 15px 0
+		@media(min-width:$xl)
+			font-size: 16px
+			line-height: 30px
+			margin: 20px 0
+	&__links
+		@media(min-width:$md)
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+		@media(min-width:$xl)
+			justify-content: flex-start
+			flex-wrap: wrap
+	&__link-box
+		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+		border-radius: 5px
+		padding: 16px
+		display: flex
+		align-items: center
+		width: 100%
+		& + .product-drop-down__link-box
+			margin-top: 15px
+			@media(min-width:$md)
+				margin-top: 0
+				margin-left: 30px
+		@media(min-width:$md)
+			width: 339px
+		@media(min-width:$xl)
+			width: auto
+			padding: 20px 26px 20px 22px
+	&__link-icon
+		width: 41px
+		height: 41px
+		object-fit: contain
+		margin-right: 20px
+		@media(min-width:$md)
+			width: 46px
+			height: 46px
+			margin-right: 22px
+	&__link-text
+	&__link-name
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		@media(min-width:$md)
+			font-size: 16px
+			line-height: 23px
+	&__link-download
+		font-size: 12px
+		line-height: 17px
+		margin-top: 6px
+		@media(min-width:$md)
+			font-size: 14px
+			line-height: 20px
+			margin-top: 7px
+	&__video-list
+		margin-top: 15px
+		display: grid
+		grid-gap: 15px
+		@media(min-width:$md)
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 30px
+			margin-top: 30px
+		@media(min-width:$xl)
+			grid-template-columns: repeat(3,1fr)
+		& iframe
+			width: 100%
+			height: 180px
+			@media(min-width:$md)
+				height: 210px
+			@media(min-width:$xl)
+				height: 250px
+	&__products
+		display: flex
+		overflow-x: auto
+		& .product-card
+			& + .product-card
+				margin-left: 10px
+				@media(min-width:$md)
+					margin-left: 0
+		@media(min-width:$md)
+			display: grid
+			grid-gap: 30px
+			grid-template-columns: repeat(3,1fr)
+		@media(min-width:$xl)
+			grid-template-columns: repeat(4,1fr)
+	&__params
+		@media(min-width:$md)
+			column-count: 2
+			column-fill: balance
+		@media(min-width:$xl)
+			column-count: 3
+	&__params-list
+		& .product-drop-down__params-item
+			&:nth-child(2n+1)
+				background-color: var(--gray)
+		& + .product-drop-down__params-list
+			margin-top: 14px
+	&__params-title
+		padding: 15px
+		color: var(--white)
+		background-color: var(--black)
+		font-weight: 700
+		font-size: 12px
+		line-height: 16px
+		text-transform: uppercase
+		@media(min-width:$xl)
+			font-size: 14px
+			line-height: 19px
+	&__params-item
+		padding: 12px 15px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__params-item-name,
+	&__params-item-value
+		font-size: 14px
+		line-height: 20px
+		width: 45%
+	&__params-item-name
+		color: var(--black50)
+	&__params-item-value
+		text-align: right
+		& a
+			display: block
+			text-align: right
+
+
+.product-drop-down
+	&__delivery
+		margin: 20px 0
+	&__delivery-item
+		display: flex
+		align-items: center
+		padding: 15px
+		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+		border-radius: 5px
+		width: 100%
+		@media(min-width:$md)
+			width: 470px
+		& + .product-drop-down__delivery-item
+			margin-top: 15px
+			@media(min-width:$md)
+				margin-top: 20px
+	&__delivery-icon
+		width: 70px
+		height: 50px
+		object-fit: contain
+		margin-right: 15px
+		@media(min-width:$md)
+			width: 90px
+			height: 70px
+	&__delivery-text
+	&__delivery-title
+		font-weight: 600
+		font-size: 16px
+		line-height: 20px
+	&__delivery-title-cost
+
+	&__delivery-subtitle
+		font-size: 14px
+		line-height: 23px
+		color: var(--black50)
+		margin-top: 10px
+	& .payment
+		width: 100%
+		@media(min-width:$md)
+			width: 570px
+		@media(min-width:$xl)
+			width: 100%
+		&__systems
+			display: grid
+			grid-gap: 10px
+			grid-template-columns: repeat(2,1fr)
+			@media(min-width:$md)
+				grid-template-columns: repeat(3,1fr)
+				grid-gap: 30px
+			@media(min-width:$xl)
+				grid-template-columns: repeat(5,1fr)
+		&__system
+			width: 140px
+			height: 80px
+			@media(min-width:$md)
+				width: 170px
+				height: 90px
+		&__system-logo
+

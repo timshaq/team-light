@@ -1,12 +1,13 @@
 export default function () {
-
+	const sliderEl = document.querySelector('.recommends__mob-slider.swiper-container');
+	if(!sliderEl) return
 	const breakpointMob = window.matchMedia('(min-width:1200px)')
 
 	let recommendMobSlider;
 
 	const enableRecommendMobSlider = function() {
 
-		recommendMobSlider = new Swiper('.recommends__mob-slider.swiper-container', {
+		recommendMobSlider = new Swiper(sliderEl, {
 			breakpoints: {
 				320: {
 					slidesPerView: 1.5,

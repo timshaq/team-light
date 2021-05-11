@@ -9,6 +9,7 @@ import blogLineFeed from './blogLineFeed.js';
 import cabToggler from './cabToggler.js';
 import prodCardOrderToggler from './prodCardOrderToggler.js';
 import catalog from './catalog.js';
+import productPageTabs from './productPageTabs.js';
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,5 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	cabToggler();
 	calcInputs();
 	catalog();
+	productPageTabs();
 
 });
