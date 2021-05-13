@@ -284,3 +284,201 @@
 				height: 90px
 		&__system-logo
 
+.product-page
+	&__achievs
+		display: none
+		@media(min-width:$md)
+			margin: 30px 0 40px
+			padding: 20px 0
+			border-top: 1px solid var(--black10)
+			border-bottom: 1px solid var(--black10)
+			display: flex
+			justify-content: space-between
+		@media(min-width:$xl)
+			padding: 30px 0
+			margin: 100px 0 40px
+	&__achievs-item
+		width: 216px
+		@media(min-width:$xl)
+			display: flex
+			width: auto
+	&__achievs-icon
+		width: 48px
+		height: 48px
+		object-fit: contain
+		display: block
+		margin-right: auto
+		margin-left: auto
+		@media(min-width:$xl)
+			margin-left: 0
+			margin-right: 22px
+	&__achievs-text
+
+	&__achievs-title
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		text-align: center
+		margin-top: 10px
+		@media(min-width:$xl)
+			font-size: 16px
+			line-height: 23px
+			margin-top: 0
+			text-align: left
+	&__achievs-subtitle
+		font-size: 12px
+		line-height: 17px
+		text-align: center
+		margin-top: 5px
+		@media(min-width:$xl)
+			font-size: 14px
+			line-height: 20px
+			text-align: left
+.product-page
+	& .page-title
+		padding-bottom: 10px
+		border-bottom: 1px solid var(--black10)
+		@media(min-width:$md)
+			padding-bottom: 15px
+	&__articul-and-compare
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin: 10px 0 20px
+		@media(min-width:$md)
+			margin: 15px 0
+			justify-content: flex-start
+	&__articul
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: var(--black50)
+		@media(min-width:$md)
+			margin-right: 30px
+	&__compare
+		display: flex
+		align-items: center
+	&__compare-icon
+		width: 20px
+		height: 20px
+		object-fit: contain
+		margin-right: 7px
+	&__compare-text
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+
+.prod-info
+	width: 100%
+	@media(min-width:$md)
+		width: 340px
+	@media(min-width:$xl)
+		width: 775px
+		display: flex
+		justify-content: space-between
+	&__slider
+		width: 100%
+		@media(min-width:$xl)
+			width: 370px
+	&__params
+		display: none
+		@media(min-width:$md)
+			display: block
+			width: 375px
+
+	&__params-sizes
+	&__params-sizes,
+	&__params-chars
+		display: none
+		@media(min-width:$xl)
+			display: block
+
+	&__params-title
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+	&__params-sizes-box
+		display: flex
+		margin-top: 10px
+	&__params-size
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+		padding: 12px 15px
+		border-radius: 10px
+		background-color: var(--gray)
+		& + .prod-info__params-size
+			margin-left: 27px
+			position: relative
+			&:before
+				content: 'x'
+				font-weight: 500
+				font-size: 12px
+				line-height: 16px
+				width: 7px
+				position: absolute
+				left: -17px
+				top: 50%
+				transform: translateY(-50%)
+
+	&__params-chars
+		margin-top: 30px
+	&__params-chars-list
+		margin-top: 15px
+	&__params-chars-li
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__params-chars-name,
+	&__params-chars-value
+		font-size: 14px
+		line-height: 20px
+	&__params-chars-name
+		color: var(--black50)
+	&__params-chars-value
+	&__params-chars-dots
+		border-bottom: 1px dotted var(--black50)
+		margin: 0 4px
+		height: 1em
+		flex: 1 0
+	&__params-chars-anchor
+		margin-top: 20px
+		display: block
+		font-weight: 500
+		font-size: 12px
+		line-height: 17px
+		padding: 12px 16px
+		border-radius: 10px
+		background-color: var(--gray)
+		width: fit-content
+	&__params-gift
+		margin-top: 30px
+		display: flex
+		border-radius: 12px
+		background-color: var(--gray)
+		width: 340px
+		@media(min-width:$xl)
+			margin-top: 40px
+			width: 370px
+	&__params-gift-icon-box
+		width: 64px
+		height: 64px
+		min-width: 64px
+		background-color: var(--purple)
+		border-radius: 12px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 15px
+	&__params-gift-icon
+		width: 35px
+		height: 35px
+		object-fit: contain
+	&__params-gift-title
+		font-size: 14px
+		line-height: 22px
+		padding: 10px 15px 10px 0
+.gray-color
+
