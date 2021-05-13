@@ -10,6 +10,8 @@ import cabToggler from './cabToggler.js';
 import prodCardOrderToggler from './prodCardOrderToggler.js';
 import catalog from './catalog.js';
 import productPageTabs from './productPageTabs.js';
+import productPageSlider from './productPageSlider.js';
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -26,5 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	calcInputs();
 	catalog();
 	productPageTabs();
+	productPageSlider();
 
 });
