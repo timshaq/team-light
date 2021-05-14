@@ -358,7 +358,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n    var swiper = new Swiper(\"#productPageThumbNail\", {\r\n        loop: true,\r\n        spaceBetween: 15,\r\n        slidesPerView: 4.5,\r\n        freeMode: true,\r\n        watchSlidesVisibility: true,\r\n        watchSlidesProgress: true,\r\n    });\r\n    var swiper2 = new Swiper(\"#productPageLarge\", {\r\n        loop: true,\r\n        spaceBetween: 10,\r\n        thumbs: {\r\n            swiper: swiper,\r\n        },\r\n    });\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/productPageSlider.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n    var swiper = new Swiper(\"#productPageThumbNail\", {\r\n        loop: true,\r\n        spaceBetween: 15,\r\n        slidesPerView: 4.5,\r\n        freeMode: true,\r\n        watchSlidesVisibility: true,\r\n        watchSlidesProgress: true,\r\n    });\r\n    var swiper2 = new Swiper(\"#productPageLarge\", {\r\n        loop: true,\r\n        spaceBetween: 10,\r\n        thumbs: {\r\n            swiper: swiper,\r\n        },\r\n        navigation: {\r\n            nextEl: '#productPageNextBtn',\r\n        },\r\n        pagination: {\r\n            el: '#productPageLargePagination',\r\n            type: 'bullets',\r\n            clickable: false,\r\n        }\r\n    });\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/productPageSlider.js?");
     /***/
   },
 

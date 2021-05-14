@@ -385,10 +385,10 @@
 	&__slider
 		width: 100%
 		& #productPageLarge
-			& .swiper-container,
+			&.swiper-container,
 			& .swiper-wrapper
 				width: 100%
-				height: 290px
+				height: 320px
 				@media(min-width:$md)
 					height: 340px
 				@media(min-width:$xl)
@@ -397,10 +397,18 @@
 				width: 100%
 				height: 100%
 				object-fit: contain
+			&.swiper-container
+				padding-bottom: 40px
+				@media(min-width:$md)
+					padding: 0
+			& .swiper-pagination
+				@media(min-width:$md)
+					display: none
 		& #productPageThumbNail
 			display: none
 			@media(min-width:$md)
 				display: flex
+				position: relative
 			& .swiper-container,
 			& .swiper-wrapper
 				width: 100%
@@ -523,6 +531,13 @@
 		width: 340px
 	@media(min-width:$xl)
 		width: 270px
+	& .prod-info__params-chars-list
+		display: none
+		@media(min-width:$md)
+			display: block
+			margin-bottom: 25px
+		@media(min-width:$xl)
+			display: none
 	&__info
 		padding: 15px 20px
 		box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
@@ -597,14 +612,31 @@
 		margin-top: 15px
 	&__info-btn-input
 		display: flex
+		justify-content: center
 		align-items: center
 		margin-top: 20px
+		background-color: var(--gray)
+		border-radius: 10px
+		overflow: hidden
 	&__info-btn
 		font-size: 14px
 		line-height: 21px
 		white-space: nowrap
+		z-index: 2
 	&__info-input
-		width: 90px
+		width: 95px
+		display: flex
+		padding: 14px 0
+		& input
+			width: 35px
+		& button
+			width: 60px
+			display: flex
+			align-items: center
+		& button.minus
+			justify-content: flex-end
+		& button.plus
+			justify-content: flex-start
 	&__info-tocart
 		margin-top: 15px
 		font-weight: 500
@@ -617,3 +649,117 @@
 		display: flex
 		justify-content: center
 		align-items: center
+.prod-info
+	&__slider
+		position: relative
+	&__slider-sale
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 10px
+		left: 10px
+		width: 40px
+		height: 40px
+		@media(min-width:$md)
+			top: 15px
+			left: 15px
+	&__slider-sale-text
+		font-style: normal
+		font-weight: 900
+		font-size: 14px
+		line-height: 17px
+		color: var(--white)
+		z-index: 2
+	&__slider-sale-bg
+		width: 100%
+		height: 100%
+		object-fit: contain
+		position: absolute
+		top: 0
+		left: 0
+	&__slider-like
+		width: 40px
+		height: 40px
+		border-radius: 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--gray)
+		position: absolute
+		top: 10px
+		right: 10px
+		z-index: 5
+		@media(min-width:$md)
+			top: 15px
+			right: 15px
+		&.active
+			& .prod-info__slider-like-icon
+				& path
+					fill: var(--red)
+	&__slider-like-icon
+		width: 24px
+		height: 24px
+		object-fit: contain
+		& path
+			fill: var(--black40)
+	&__slider-offer
+		font-weight: 500
+		font-size: 12px
+		line-height: 15px
+		padding: 7px
+		background-color: var(--gray)
+		border-radius: 4px
+		position: absolute
+		top: 250px
+		left: 10px
+		z-index: 2
+		@media(min-width:$md)
+			padding: 10px
+			top: 295px
+			left: 15px
+		@media(min-width:$xl)
+			top: 320px
+	&__slider-brand-box
+		display: none
+		@media(min-width:$xl)
+			display: flex
+			align-items: center
+			margin-top: 30px
+			box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.05)
+			border-radius: 5px
+			padding: 15px 0 15px 20px
+			width: 370px
+			margin-right: auto
+			margin-left: auto
+	&__slider-brand-logo
+		width: 100px
+		height: 40px
+		object-fit: contain
+		padding-right: 20px
+		border-right: 1px solid var(--black10)
+	&__slider-brand-link
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+	&__slider-btn-next
+		width: 40px
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--black40)
+		position: absolute
+		right: 0
+		top: 0
+		z-index: 9
+		@media(min-width:$md)
+			width: 30px
+		& svg
+			width: 6px
+			height: 12px
+			object-fit: contain
+			& path
+				stroke: var(--white)
+

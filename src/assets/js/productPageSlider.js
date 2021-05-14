@@ -14,6 +14,14 @@ export default function () {
         thumbs: {
             swiper: swiper,
         },
+        navigation: {
+            nextEl: '#productPageNextBtn',
+        },
+        pagination: {
+            el: '#productPageLargePagination',
+            type: 'bullets',
+            clickable: false,
+        }
     });
 
 }
