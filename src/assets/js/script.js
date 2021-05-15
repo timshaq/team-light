@@ -11,6 +11,7 @@ import prodCardOrderToggler from './prodCardOrderToggler.js';
 import catalog from './catalog.js';
 import productPageTabs from './productPageTabs.js';
 import productPageSlider from './productPageSlider.js';
+import headerCatalogModal from './headerCatalogModal.js';
 
 
 
@@ -29,5 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	catalog();
 	productPageTabs();
 	productPageSlider();
+	headerCatalogModal();
 
 });

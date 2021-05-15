@@ -142,6 +142,9 @@
 	& .min-mob
 		@media(min-width:$xl)
 			display: none
+	&:hover
+		& .header-bottom-catalog__content
+			display: block
 	&__header
 
 	&__logo
@@ -174,6 +177,7 @@
 		color: var(--white)
 		margin-left: 37px
 	&__content
+		display: none
 		position: absolute
 		bottom: 0
 		left: 0
@@ -201,14 +205,16 @@
 	border-right: 1px solid var(--black10)
 	padding: 5px 0
 	&__category
-
+		&.active
+			& .catalog-modal__subcats
+				display: block
+			& .catalog-modal__name
+				background-color: var(--white)
 	&__name
 		display: flex
 		align-items: center
 		padding: 14px
 		width: 100%
-		&:hover
-			background-color: var(--white)
 	&__name-icon
 		width: 24px
 		height: 24px
@@ -228,11 +234,13 @@
 		overflow-y: auto
 		background-color: var(--white)
 		padding: 30px
+		display: none
+	&__subcats-box
+		margin-bottom: 30px
 		display: grid
 		grid-gap: 70px
 		grid-template-columns: repeat(4,1fr)
 	&__subcategory
-
 	&__subcategory-title
 		font-weight: 600
 		font-size: 14px

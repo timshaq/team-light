@@ -160,6 +160,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat, sans-serif;
 }
 
+*::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--light-green);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: var(--green);
+}
+
 *, a {
   color: var(--black);
 }
@@ -1108,6 +1118,10 @@ label.label-radio span {
   }
 }
 
+.header-bottom-catalog:hover .header-bottom-catalog__content {
+  display: block;
+}
+
 .header-bottom-catalog__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1137,6 +1151,7 @@ label.label-radio span {
 }
 
 .header-bottom-catalog__content {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1162,6 +1177,14 @@ label.label-radio span {
   padding: 5px 0;
 }
 
+.catalog-modal__category.active .catalog-modal__subcats {
+  display: block;
+}
+
+.catalog-modal__category.active .catalog-modal__name {
+  background-color: var(--white);
+}
+
 .catalog-modal__name {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1173,10 +1196,6 @@ label.label-radio span {
           align-items: center;
   padding: 14px;
   width: 100%;
-}
-
-.catalog-modal__name:hover {
-  background-color: var(--white);
 }
 
 .catalog-modal__name-icon {
@@ -1205,6 +1224,11 @@ label.label-radio span {
   overflow-y: auto;
   background-color: var(--white);
   padding: 30px;
+  display: none;
+}
+
+.catalog-modal__subcats-box {
+  margin-bottom: 30px;
   display: grid;
   grid-gap: 70px;
   grid-template-columns: repeat(4, 1fr);
