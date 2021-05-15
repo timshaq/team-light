@@ -1,0 +1,439 @@
+.header
+	margin-bottom: 30px
+	@media(min-width:$md)
+		margin-bottom: 40px
+	@media(min-width:$xl)
+		margin-bottom: 60px
+	&__top
+
+.header-top
+	display: none
+	@media(min-width:$xl)
+		display: block
+		& .fix-box
+			display: flex
+			justify-content: space-between
+			height: 80px
+			padding-top: 20px
+			padding-bottom: 17px
+	&__logo-box
+		width: 155px
+		height: 40px
+	&__logo
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__geo-box
+		position: relative
+		display: flex
+		align-items: center
+		height: 100%
+	&__geo
+		font-weight: 600
+		font-size: 12px
+		line-height: 15px
+	&__geo-icon
+		width: 15px
+		height: 15px
+		object-fit: contain
+	&__geo-item
+
+	&__search-box
+		width: 420px
+		height: 40px
+		border: 1px solid var(--black25)
+		border-radius: 5px
+		position: relative
+	&__search-fieldset
+
+	&__search-label
+		width: 350px
+		height: 100%
+		display: block
+		padding: 10px
+	&__search-input
+		font-size: 14px
+		line-height: 20px
+		display: block
+		width: 100%
+		background-color: transparent
+	&__search-reset
+		width: 12px
+		height: 12px
+		position: absolute
+		right: 60px
+		top: 50%
+		transform: translateY(-50%)
+	&__search-reset-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__search-submit
+		width: 42px
+		height: 42px
+		background-color: var(--green)
+		border-radius: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		right: -1px
+		top: -2px
+	&__search-submit-icon
+		width: 18px
+		height: 18px
+		object-fit: contain
+	&__links
+		display: flex
+	&__links-li
+		& + .header-top__links-li
+			margin-left: 20px
+	&__links-link
+		width: 40px
+		height: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--gray)
+		border-radius: 5px
+	&__links-icon
+		width: 20px
+		height: 20px
+		object-fit: contain
+	&__tel
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__tel-link
+		font-weight: 700
+		font-size: 20px
+		line-height: 24px
+		display: block
+		text-align: center
+	&__tel-callback
+		font-weight: 600
+		font-size: 12px
+		line-height: 15px
+		text-align: center
+		margin-top: auto
+
+.header-bottom
+	background-color: var(--black)
+	&__nav
+		display: none
+		@media(min-width:$xl)
+			display: block
+	&__nav-list
+		display: flex
+	&__nav-li
+		& + .header-bottom__nav-li
+			margin-left: 50px
+	&__nav-a
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		color: var(--white)
+
+.header-bottom
+	&__catalog
+
+.header-bottom-catalog
+	position: relative
+	& .min-mob
+		@media(min-width:$xl)
+			display: none
+	&__header
+
+	&__logo
+
+	&__logo-ph
+
+	&__controls
+
+	&__callback
+
+	&__callback-icon
+
+	&__compare
+
+	&__compare-icon
+
+	&__btn
+		display: flex
+		align-items: center
+		background-color: var(--white005)
+		padding: 14px 36px 14px 17px
+	&__btn-icon
+		width: 32px
+		height: 32px
+		object-fit: contain
+	&__btn-text
+		font-weight: bold
+		font-size: 18px
+		line-height: 22px
+		color: var(--white)
+		margin-left: 37px
+	&__content
+		position: absolute
+		bottom: 0
+		left: 0
+		transform: translateY(100%)
+		z-index: 10
+	&__nav
+		@media(min-width:$xl)
+			display: none
+	&__nav-a
+
+	&__catalog-modal
+
+	&__close
+
+	&__close-icon
+
+.header-bottom-catalog
+	&__catalog-modal
+.catalog-modal
+	width: 270px
+	height: 500px
+	overflow-y: auto
+	background-color: #F9F9F9
+	max-height: calc(100vh - 160px)
+	border-right: 1px solid var(--black10)
+	padding: 5px 0
+	&__category
+
+	&__name
+		display: flex
+		align-items: center
+		padding: 14px
+		width: 100%
+		&:hover
+			background-color: var(--white)
+	&__name-icon
+		width: 24px
+		height: 24px
+		object-fit: contain
+		margin-right: 12px
+	&__name-title
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+	&__subcats
+		position: absolute
+		right: 0
+		top: 0
+		transform: translateX(100%)
+		width: 900px
+		height: 100%
+		overflow-y: auto
+		background-color: var(--white)
+		padding: 30px
+		display: grid
+		grid-gap: 70px
+		grid-template-columns: repeat(4,1fr)
+	&__subcategory
+
+	&__subcategory-title
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		margin-bottom: 15px
+	&__subcategory-link
+		display: block
+		font-size: 14px
+		line-height: 20px
+		color: var(--black50)
+		& + .catalog-modal__subcategory-link
+			margin-top: 15px
+		&:hover
+			color: var(--green)
+.header-bottom
+	&__menu
+		@media(min-width:$xl)
+			display: none
+	&__menu-icon
+
+	&__logo-box
+		@media(min-width:$xl)
+			display: none
+	&__logo-ph
+
+	&__search
+		@media(min-width:$xl)
+			display: none
+	&__search-btn
+		@media(min-width:$xl)
+			display: none
+	&__search-icon
+
+	&__search
+
+.header-bottom
+	& .fix-box
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__controls
+
+.header-bottom-controls
+	display: flex
+	&__item
+		width: 60px
+		height: 60px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: var(--white005)
+		& + .header-bottom-controls__item
+			margin-left: 10px
+	&__counter
+		display: none
+		@media(min-width:$xl)
+			font-weight: 700
+			font-size: 13px
+			line-height: 16px
+			color: var(--white)
+			background-color: var(--red)
+			min-width: 24px
+			height: 24px
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			border-radius: 4px
+	&__wish
+		position: relative
+	&__wish-counter
+		top: 0
+		right: 0
+		transform: translate(50%,-50%)
+	&__cab
+		@media(min-width:$xl)
+			display: none
+	&__cart
+		position: relative
+		width: auto
+		min-width: 200px
+		padding: 9px 24px 9px 18px
+	&__cart-text
+		display: none
+		@media(min-width:$xl)
+			display: block
+			margin-left: 18px
+	&__cart-title
+		font-weight: 700
+		font-size: 16px
+		line-height: 20px
+		color: var(--white)
+	&__cart-price
+		font-weight: 600
+		font-size: 14px
+		line-height: 19px
+		color: var(--white60)
+		margin-top: 3px
+	&__cart-counter
+		top: 50%
+		right: 0
+		transform: translate(50%,-50%)
+	&__wish-icon,
+	&__cab-icon,
+	&__cart-icon
+		width: 22px
+		height: 22px
+		object-fit: contain
+		@media(min-width:$xl)
+			width: 24px
+			height: 24px
+
+.mini-cart
+	@media(min-width:$xl)
+		margin-left: 10px
+		position: relative
+		&:hover
+			& .mini-cart__box
+				display: block
+	&__box
+		position: absolute
+		bottom: 0
+		right: 0
+		transform: translateY(100%)
+		z-index: 10
+		display: none
+.mini-cart-modal
+	margin-top: 10px
+	background-color: var(--white)
+	padding: 20px 20px 15px
+	box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, 0.15)
+	border-radius: 5px
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 10px
+		border-bottom: 1px solid var(--black10)
+	&__title
+		font-weight: bold
+		font-size: 18px
+		line-height: 26px
+	&__counter
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		color: var(--black40)
+	&__body
+		margin: 20px 0
+	& .cart-product-card
+		box-shadow: none
+		display: flex
+		flex-wrap: nowrap
+		padding: 0
+		padding-right: 36px
+		& + .cart-product-card
+			margin-top: 20px
+		&__ph-box
+			width: 60px
+			height: 60px
+		&__md-merge
+			margin-left: 20px
+		&__text
+			width: 210px
+			margin: 0
+		&__name-a
+			font-weight: 500
+			font-size: 14px
+			line-height: 20px
+		&__nums
+			margin-left: 21px
+			margin-top: 0
+		&__price-box
+			margin-left: 20px
+			width: 80px
+			justify-content: flex-end
+		&__price.current
+			font-weight: 700
+			font-size: 14px
+			line-height: 17px
+		&__price.old
+			font-size: 12px
+			line-height: 15px
+	&__body
+		max-height: 230px
+		overflow-y: auto
+	&__footer
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 15px
+		border-top: 1px solid var(--black10)
+	&__footer-total
+		font-weight: 700
+		font-size: 16px
+		line-height: 23px
+	&__footer-tocart
+		font-weight: 500
+		font-size: 16px
+		line-height: 23px
+
+
+
+
