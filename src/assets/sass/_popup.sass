@@ -138,5 +138,25 @@
 			@media(min-width:$xl)
 				width: 230px
 				height: 180px
+		&__sms-code
 
 
+.sms-code
+	width: 248px
+	display: flex
+	justify-content: space-between
+	margin: 30px auto
+	@media(min-width:$md)
+		width: 278px
+	&__input
+		width: 47px
+		height: 47px
+		background-color: var(--gray)
+		border-radius: 5px
+		font-size: 20px
+		padding: 15px
+		color: var(--black50)
+		text-align: center
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button
+			-webkit-appearance: none

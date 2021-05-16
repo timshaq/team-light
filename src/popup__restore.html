@@ -29,28 +29,12 @@
 				</h3>
 			</legend>
 
-			<ul class="popup__sms-code">
-				<li class="popup__sms-code-field">
-					<label for="" class="popup__sms-code-label">
-						<input type="number" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" class="popup__sms-code-input" placeholder="Email">
-					</label>
-				</li>
-				<li class="popup__sms-code-field">
-					<label for="" class="popup__sms-code-label">
-						<input type="number" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" class="popup__sms-code-input" placeholder="Email">
-					</label>
-				</li>
-				<li class="popup__sms-code-field">
-					<label for="" class="popup__sms-code-label">
-						<input type="number" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" class="popup__sms-code-input" placeholder="Email">
-					</label>
-				</li>
-				<li class="popup__sms-code-field">
-					<label for="" class="popup__sms-code-label">
-						<input type="number" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" class="popup__sms-code-input" placeholder="Email">
-					</label>
-				</li>
-			</ul>
+			<div class="popup__sms-code sms-code">
+				<input type="number" inputmode="numeric" min="0" max="9" class="sms-code__input">
+				<input type="number" inputmode="numeric" min="0" max="9" class="sms-code__input">
+				<input type="number" inputmode="numeric" min="0" max="9" class="sms-code__input">
+				<input type="number" inputmode="numeric" min="0" max="9" class="sms-code__input">
+			</div>
 		</fieldset>
 
 		<button type="submit" class="popup__submit btn-green">

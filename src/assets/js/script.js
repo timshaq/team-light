@@ -13,6 +13,7 @@ import productPageTabs from './productPageTabs.js';
 import productPageSlider from './productPageSlider.js';
 import headerCatalogModal from './headerCatalogModal.js';
 import dragToScroll from './dragToScroll.js';
+import smsCodeInputs from './smsCodeInputs.js';
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -32,5 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	productPageSlider();
 	headerCatalogModal();
 	dragToScroll();
+	smsCodeInputs();
 
 });
