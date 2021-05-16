@@ -467,3 +467,11 @@ label
 			margin-top: 40px
 			width: fit-content
 			min-width: 216px
+.drag-to-scroll
+	user-select: none
+	& *
+		user-select: none
+	&::-webkit-scrollbar
+		width: 0
+		height: 0
+		background-color: transparent

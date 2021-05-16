@@ -12,7 +12,7 @@ import catalog from './catalog.js';
 import productPageTabs from './productPageTabs.js';
 import productPageSlider from './productPageSlider.js';
 import headerCatalogModal from './headerCatalogModal.js';
-
+import dragToScroll from './dragToScroll.js';
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,5 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	productPageTabs();
 	productPageSlider();
 	headerCatalogModal();
+	dragToScroll();
 
 });
