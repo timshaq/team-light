@@ -312,6 +312,20 @@ label
 					opacity: 1
 					visibility: visible
 					transition: all ease .4s
+	&.label-textarea
+		height: 110px
+		display: block
+		position: relative
+		& textarea
+			resize: none
+			height: 100%
+			width: 100%
+			background-color: var(--gray)
+			font-size: 14px
+			line-height: 145%
+			color: var(--input-color)
+			padding: 13px
+			border-radius: 5px
 	&.label-checkbox
 		position: relative
 		padding-left: 28px
@@ -417,3 +431,39 @@ label
 		&::-webkit-inner-spin-button,
 		&::-webkit-outer-spin-button
 			-webkit-appearance: none
+.error-box
+	&__ph
+		width: 180px
+		height: 150px
+		object-fit: contain
+	&__title
+		font-weight: 600
+		font-size: 18px
+		line-height: 26px
+		margin: 20px 0
+		@media(min-width:$md)
+			font-weight: 700
+			font-size: 20px
+			line-height: 29px
+			margin: 30px 0 15px
+		@media(min-width:$xl)
+			margin: 20px 0 15px
+	&__p
+		font-size: 14px
+		line-height: 23px
+		color: var(--black50)
+		@media(min-width:$md)
+			width: 670px
+	&__link
+		font-size: 16px
+		line-height: 23px
+		@media(min-width:$md)
+			font-weight: 700
+			font-size: 16px
+			line-height: 23px
+	&__btn
+		margin-top: 20px
+		@media(min-width:$md)
+			margin-top: 40px
+			width: fit-content
+			min-width: 216px
