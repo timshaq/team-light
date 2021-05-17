@@ -14,6 +14,7 @@ import productPageSlider from './productPageSlider.js';
 import headerCatalogModal from './headerCatalogModal.js';
 import dragToScroll from './dragToScroll.js';
 import smsCodeInputs from './smsCodeInputs.js';
+import headerActions from './header.js';
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -34,5 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	headerCatalogModal();
 	dragToScroll();
 	smsCodeInputs();
+	headerActions();
 
 });

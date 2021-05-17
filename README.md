@@ -1,7 +1,10 @@
 # Team Light — online store of lamps
 
 ## HTML naming
+<!-- header mob tab поиск -->
+<!-- загрузка каталога, успех, ошибка -->
 1. Главная — index.html
+<!-- добавить цену range -->
 1. Каталог — catalog.html
 1. Карточка товара — product.html
 1. Корзина — cart.html
@@ -10,6 +13,7 @@
 1. Оформление заказа — order.html
 1. Новости — feed.html
 1. Открытая новость — article.html 
+<!-- карта -->
 1. Контакты — contacts.html
 1. Доставка и оплата — delivery.html
 1. О нас — about.html
@@ -23,13 +27,14 @@
 
 1. Авторизация — popup__auth.html
 1. Регистрация — popup__reg.html
-1. Восстановление пароля — popup__restore.html // не готово
+1. Восстановление пароля — popup__restore.html
 1. Обратный звонок — popup__callback.html
 
 1. Покупка в 1 клик (Шаг 1) — popup__one-click1.html
 1. Покупка в 1 клик (Шаг 2) — popup__one-click2.html
 1. Подписка на товар — popup__subscribe.html
 
+<!-- не готово -->
 1. Быстрый просмотр — popup__fast-view.html
 1. Быстрый просмотр (Загрузка) — popup__fast-view_load.html
 1. Быстрый просмотр (Ошибка) — popup__fast-view_error.html

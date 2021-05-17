@@ -72,7 +72,7 @@
 					</option>
 				</select>
 			</label>
-			<button class="catalog-header__filter-btn">
+			<button class="catalog-header__filter-btn" id="catalogOpenFilterBtn">
 				<img src="assets/img/filter-icon.svg" alt="" class="catalog-header__filter-btn-icon">
 				Фильтр
 			</button>
@@ -149,8 +149,16 @@
 
 <div class="fix-box">
 	<div class="catalog">
-		<aside class="catalog__filter">
+		<aside class="catalog__filter" id="catalogFilter">
 			<form class="catalog__filter-form catalog-filter-form">
+				<div class="catalog-filter-form__hidden-header">
+					<h2 class="catalog-filter-form__hidden-title">
+						Фильтр
+					</h2>
+					<button class="catalog-filter-form__close" id="catalogFilterClose">
+						<img src="assets/img/close-icon_black.svg" alt="" class="catalog-filter-form__close-icon">
+					</button>
+				</div>
 				<fieldset class="catalog-filter-form__fieldset active">
 					<legend class="catalog-filter-form__fieldset-legend">
 						<h2 class="catalog-filter-form__fieldset-title">
@@ -3671,7 +3679,7 @@
 					
 				</div>
 				
-				<div class="popular-brands__scroll-mob">
+				<div class="popular-brands__scroll-mob drag-to-scroll">
 					<ul class="popular-brands__list">
 						
 						<li class="popular-brands__item">
@@ -4398,7 +4406,7 @@
 
 		</div>
 
-		<div class="blog-line__scroll-mob">
+		<div class="blog-line__scroll-mob drag-to-scroll">
 
 			<ul class="feed__list active">
 				

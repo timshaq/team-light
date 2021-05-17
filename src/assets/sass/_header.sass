@@ -1,5 +1,7 @@
 .header
 	margin-bottom: 30px
+	@media(max-width:1199px)
+		position: relative
 	@media(min-width:$md)
 		margin-bottom: 40px
 	@media(min-width:$xl)
@@ -7,7 +9,17 @@
 	&__top
 
 .header-top
-	display: none
+	@media(max-width:1199px)
+		width: 322px
+		position: absolute
+		top: 50%
+		left: calc(50% + 20px)
+		transform: translate(-50%, -50%)
+		& .header-top__logo-box,
+		& .header-top__geo-box,
+		& .header-top__links,
+		& .header-top__tel
+			display: none
 	@media(min-width:$xl)
 		display: block
 		& .fix-box
@@ -39,11 +51,19 @@
 	&__geo-item
 
 	&__search-box
-		width: 420px
-		height: 40px
-		border: 1px solid var(--black25)
-		border-radius: 5px
-		position: relative
+		@media(min-width:$md)
+			width: 322px
+			height: 40px
+			background-color: var(--white005)
+			position: relative
+			display: block
+			border-radius: 5px
+		@media(min-width:$xl)
+			width: 420px
+			height: 40px
+			border: 1px solid var(--black25)
+			border-radius: 5px
+			position: relative
 	&__search-fieldset
 
 	&__search-label
@@ -51,12 +71,22 @@
 		height: 100%
 		display: block
 		padding: 10px
+		@media(max-width:1199px)
+			width: 100%
+			padding: 0
 	&__search-input
 		font-size: 14px
 		line-height: 20px
 		display: block
 		width: 100%
 		background-color: transparent
+		@media(max-width:1199px)
+			width: 100%
+			padding: 10px 80px 10px 10px
+			background-color: transparent
+			font-size: 14px
+			line-height: 19px
+			color: var(--white60)
 	&__search-reset
 		width: 12px
 		height: 12px
@@ -79,6 +109,18 @@
 		position: absolute
 		right: -1px
 		top: -2px
+		@media(max-width:1199px)
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			background-color: var(--green)
+			border-radius: 5px
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
 	&__search-submit-icon
 		width: 18px
 		height: 18px
@@ -136,9 +178,44 @@
 
 .header-bottom
 	&__catalog
-
+.header-bottom-catalog-box
+	@media(max-width:1199px)
+		display: none
+		width: 100vw
+		height: 100vh
+		overflow-y: auto
+		background-color: var(--black25)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 15
+		&.mob-active
+			display: block
 .header-bottom-catalog
 	position: relative
+	display: none
+	@media(max-width:1199px)
+		display: flex
+		flex-direction: column
+		min-width: 265px
+		width: 65vw
+		min-height: 100%
+		height: auto
+		background-color: var(--white)
+		padding: 20px 10px 20px 15px
+		& .header-bottom-catalog__content
+			display: block
+			position: static
+			transform: none
+			& .catalog-modal
+				display: none
+			&.mob-active
+				& .catalog-modal
+					display: block
+				& .header-bottom-catalog__nav
+					display: none
+	@media(min-width:$xl)
+		display: block
 	& .min-mob
 		@media(min-width:$xl)
 			display: none
@@ -147,19 +224,42 @@
 			& .header-bottom-catalog__content
 				display: block
 	&__header
+		background-color: var(--white)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 15px
+		border-bottom: 1px solid var(--black10)
+	&__catalog-modal
 
 	&__logo
-
+		width: 120px
+		height: 32px
 	&__logo-ph
-
+		width: 100%
+		height: 100%
+		object-fit: contain
 	&__controls
-
-	&__callback
-
-	&__callback-icon
-
+		display: flex
+	&__callback,
 	&__compare
-
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		border-radius: 5px
+	&__callback
+		background-color: var(--green)
+	&__callback-icon
+	&__callback-icon,
+	&__compare-icon
+		width: 20px
+		height: 20px
+		object-fit: contain
+	&__compare
+		background-color: var(--gray)
+		margin-left: 10px
 	&__compare-icon
 
 	&__btn
@@ -167,16 +267,34 @@
 		align-items: center
 		background-color: var(--white005)
 		padding: 14px 36px 14px 17px
-	&__btn-icon
+		@media(max-width:1199px)
+			background-color: var(--black)
+			margin: 30px 0
+			&.back
+				& .header-bottom-catalog__btn-icon2
+					display: block
+				& .header-bottom-catalog__btn-icon
+					display: none
+	&__btn-icon,
+	&__btn-icon2
 		width: 32px
 		height: 32px
 		object-fit: contain
+	&__btn-icon2
+		display: none
 	&__btn-text
 		font-weight: bold
 		font-size: 18px
 		line-height: 22px
 		color: var(--white)
 		margin-left: 37px
+		&_hidden
+			display: none
+			@media(min-width:$md)
+				display: inline
+				color: inherit
+			@media(min-width:$xl)
+				display: none
 	&__content
 		display: none
 		position: absolute
@@ -188,32 +306,72 @@
 		@media(min-width:$xl)
 			display: none
 	&__nav-a
-
-	&__catalog-modal
-
-	&__close
-
-	&__close-icon
-
-.header-bottom-catalog
-	display: none
-	@media(min-width:$xl)
 		display: block
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		& + .header-bottom-catalog__nav-a
+			margin-top: 30px
 	&__catalog-modal
+	&__socials
+		display: none
+		@media(max-width:1199px)
+			display: flex
+			margin-top: auto
+	&__socials-link
+		& + .header-bottom-catalog__socials-link
+			margin-left: 20px
+			@media(min-width:$md)
+				margin-left: 30px
+
+	&__socials-icon
+		width: 30px
+		height: 30px
+		object-fit: contain
+		@media(min-width:$md)
+			width: 40px
+			height: 40px
+	&__close
+		width: 30px
+		height: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 15px
+		right: -45px
+		background-color: var(--white)
+		border-radius: 5px
+	&__close-icon
+		width: 18px
+		height: 18px
+		object-fit: contain
+
 .catalog-modal
-	width: 270px
-	height: 500px
-	overflow-y: auto
-	background-color: #F9F9F9
-	max-height: calc(100vh - 160px)
-	border-right: 1px solid var(--black10)
-	padding: 5px 0
+	@media(max-width:1199px)
+		width: 100%
+		height: auto
+		margin-bottom: 50px
+	@media(min-width:$xl)
+		width: 270px
+		height: 500px
+		overflow-y: auto
+		background-color: #F9F9F9
+		max-height: calc(100vh - 160px)
+		border-right: 1px solid var(--black10)
+		padding: 5px 0
 	&__category
-		&.active
-			& .catalog-modal__subcats
-				display: block
-			& .catalog-modal__name
-				background-color: var(--white)
+		@media(max-width:1199px)
+			&.mob-open
+				margin-bottom: 20px
+				& .catalog-modal__subcats
+					display: block
+		@media(min-width:$xl)
+			&.active
+				& .catalog-modal__subcats
+					display: block
+				& .catalog-modal__name
+					background-color: var(--white)
 	&__name
 		display: flex
 		align-items: center
@@ -229,27 +387,37 @@
 		font-size: 14px
 		line-height: 20px
 	&__subcats
-		position: absolute
-		right: 0
-		top: 0
-		transform: translateX(100%)
-		width: 900px
-		height: 100%
-		overflow-y: auto
-		background-color: var(--white)
-		padding: 30px
-		display: none
+		@media(max-width:1199px)
+			display: none
+		@media(min-width:$xl)
+			position: absolute
+			right: 0
+			top: 0
+			transform: translateX(100%)
+			width: 900px
+			height: 100%
+			overflow-y: auto
+			background-color: var(--white)
+			padding: 30px
+			display: none
 	&__subcats-box
-		margin-bottom: 30px
-		display: grid
-		grid-gap: 70px
-		grid-template-columns: repeat(4,1fr)
+		@media(min-width:$xl)
+			margin-bottom: 30px
+			display: grid
+			grid-gap: 70px
+			grid-template-columns: repeat(4,1fr)
 	&__subcategory
+		@media(max-width:1199px)
+			padding-left: 35px
+			& + .catalog-modal__subcategory
+				margin-top: 15px
 	&__subcategory-title
 		font-weight: 600
 		font-size: 14px
 		line-height: 20px
 		margin-bottom: 15px
+		@media(max-width:1199px)
+			display: none
 	&__subcategory-link
 		display: block
 		font-size: 14px
@@ -273,6 +441,8 @@
 		width: 140px
 		height: 36px
 		margin: 0 10px 0 18px
+		@media(min-width:$md)
+			margin-right: auto
 		@media(min-width:$xl)
 			display: none
 	&__logo-ph
