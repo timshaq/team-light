@@ -476,3 +476,40 @@ label
 		width: 0
 		height: 0
 		background-color: transparent
+.catalog-filter-form__fieldset-li
+	&.with-note
+		position: relative
+		& .label-note
+			display: none
+			@media(min-width:$xl)
+				display: block
+				z-index: 5
+				&:hover
+					& .label-note-msg
+						display: block
+		& .label-note-icon
+			width: 18px
+			height: 18px
+			object-fit: contain
+			position: absolute
+			top: 50%
+			right: 10px
+			transform: translateY(-50%)
+			z-index: 5
+		& .label-note-msg
+			display: none
+			width: 235px
+			padding: 10px
+			border-radius: 10px
+			background-color: var(--white)
+			font-weight: 600
+			font-size: 12px
+			line-height: 19px
+			box-shadow: 0px 7px 15px -10px rgba(0, 0, 0, 0.15)
+			position: absolute
+			top: 0
+			right: -10px
+			transform: translateX(100%)
+			z-index: 5
+
+

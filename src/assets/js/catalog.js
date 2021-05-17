@@ -61,4 +61,43 @@ filter.addEventListener('click', function(ev) {
 	if(ev.target === this) closeEl(filter);
 })
 
+
+
+
+const priceSlidersNL = document.querySelectorAll('.price-slider');
+
+const priceSliders = Array.prototype.slice.call(priceSlidersNL);
+
+priceSliders.forEach(slider => {
+	var stepsSlider = slider
+	var input0 = slider.querySelector('.slider-input1');
+	var input1 = slider.querySelector('.slider-input2');
+	var inputs = [input0, input1];
+	var min = parseInt(slider.getAttribute('data-min'))
+	var max = parseInt(slider.getAttribute('data-max'))
+	var start = 10*max/100
+	var end = 90*max/100
+	var symbol = slider.getAttribute('data-symbol')
+	noUiSlider.create(stepsSlider, {
+	    start: [start, end],
+	    connect: [false,true,false],
+	    range: {
+	        'min': [min],
+	        'max': max
+	    },
+	    format: {
+	    	to: function(val) {
+	    		return Math.ceil(val) + ` ${symbol}`;
+	    	},
+	    	from: function(val) {
+	    		return val.replace(` ${symbol}`, '');
+	    	},
+	    }
+	});
+	stepsSlider.noUiSlider.on('update', function (values, handle) {
+	    inputs[handle].value = values[handle];
+	});
+})
+
+
 }

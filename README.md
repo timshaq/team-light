@@ -4,7 +4,6 @@
 1. Главная — index.html
 1. Главная (загрузка товаров) — index__loading.html
 1. Главная (ошибка загрузки товаров) — index__error.html
-<!-- добавить цену range -->
 1. Каталог — catalog.html
 1. Карточка товара — product.html
 1. Корзина — cart.html
@@ -13,7 +12,6 @@
 1. Оформление заказа — order.html
 1. Новости — feed.html
 1. Открытая новость — article.html 
-<!-- карта -->
 1. Контакты — contacts.html
 1. Доставка и оплата — delivery.html
 1. О нас — about.html

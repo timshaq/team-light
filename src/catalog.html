@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="assets/lib/nouislider/nouislider.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 </head>
 
@@ -202,6 +203,42 @@
 						<button type="button" class="catalog-filter-form__fieldset-more green-color">
 							Смотреть все
 						</button>
+					</div>
+				</fieldset>
+
+				<fieldset class="catalog-filter-form__fieldset active">
+					<legend class="catalog-filter-form__fieldset-legend">
+						<h2 class="catalog-filter-form__fieldset-title">
+							Цена
+						</h2>
+						<img src="assets/img/tab-arrow.svg" alt="" class="catalog-filter-form__fieldset-toggler">
+					</legend>
+					<div class="catalog-filter-form__fieldset-content">
+						<div class="catalog-filter-form__fieldset-price-slider price-slider" data-min="0" data-max="50000" data-symbol="₽">
+							<div class="price-slider__inputs">
+								<input type="text" readonly class="slider-input1">
+								<input type="text" readonly class="slider-input2">
+								<div class="price-slider__separator"></div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="catalog-filter-form__fieldset active">
+					<legend class="catalog-filter-form__fieldset-legend">
+						<h2 class="catalog-filter-form__fieldset-title">
+							Площадь освещения
+						</h2>
+						<img src="assets/img/tab-arrow.svg" alt="" class="catalog-filter-form__fieldset-toggler">
+					</legend>
+					<div class="catalog-filter-form__fieldset-content">
+						<div class="catalog-filter-form__fieldset-price-slider price-slider" data-min="0" data-max="100" data-symbol="м²">
+							<div class="price-slider__inputs">
+								<input type="text" readonly class="slider-input1">
+								<input type="text" readonly class="slider-input2">
+								<div class="price-slider__separator"></div>
+							</div>
+						</div>
 					</div>
 				</fieldset>
 
@@ -416,7 +453,13 @@
 					</legend>
 					<div class="catalog-filter-form__fieldset-content">
 						<ul class="catalog-filter-form__fieldset-ul">
-							<li class="catalog-filter-form__fieldset-li">
+							<li class="catalog-filter-form__fieldset-li with-note">
+								<div class="label-note">
+									<img src="assets/img/label-note-icon.svg" alt="" class="label-note-icon">
+									<div class="label-note-msg">
+										<strong>Вы уверены?</strong> Современный Китай производит качественные и технологичные товары.
+									</div>
+								</div>
 								<label class="label-checkbox">
 									<input type="checkbox">
 									<div></div>
@@ -4712,6 +4755,8 @@
 
 </main>
 
+
+<script src="assets/lib/nouislider/nouislider.min.js"></script>
 @@include('assets/html/footer.html')
 
 </body>
