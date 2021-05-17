@@ -28,4 +28,51 @@
 			display: grid
 			grid-gap: 30px
 			grid-template-columns: repeat(4,1fr)
+.recommends__mob-slider
+	&.loading
+		& .product-card
+			position: relative
+			& *
+				opacity: 0
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 9
+				border-radius: 10px
+				background: linear-gradient(to right, #808080, #949494, #a9a9a9, #bdbebd, #e9e9e9)
+				animation: slide 2s infinite linear
 
+@keyframes slide
+	0%
+		opacity: .5
+	50%
+		opacity: .1
+	100%
+		opacity: .5
+
+
+.recommends
+	&__error
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-top: 45px
+	&__error-txt
+		font-weight: 500
+		font-size: 14px
+		line-height: 20px
+		padding: 20px 45px
+		background-color: var(--red10)
+		color: var(--red)
+		border-radius: 5px
+		text-align: center
+	&__error-reload
+		font-weight: 700
+		font-size: 14px
+		line-height: 21px
+		padding: 18px 70px
+		margin-top: 10px

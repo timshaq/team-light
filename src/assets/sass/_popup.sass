@@ -139,8 +139,81 @@
 				width: 230px
 				height: 180px
 		&__sms-code
+		&.popup-fast-view
+			width: 1030px
+			& .popup-fast-view__header
+				padding-bottom: 15px
+				border-bottom: 1px solid var(--black10)
+				margin-bottom: 15px
+			& .popup-fast-view__header-title
+				font-weight: 700
+				font-size: 24px
+				line-height: 35px
+			& .product-page__about
+				margin-top: 28px
+			& .prod-info__params-chars-li + .prod-info__params-chars-li
+				margin-top: 20px
+			& .product-order-box__info-price
+				margin-top: 50px
+			& .popup-fast-view__btns
+				display: flex
+				margin-top: 30px
+			& .popup-fast-view__tocart
+				width: 170px
+			& .popup-fast-view__toprod
+				width: 170px
+				background-color: var(--gray)
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 10px
+				margin-left: 30px
+			& .popup-fast-view__rating
+				display: flex
+				align-items: center
+			& .popup-fast-view__rating-img
+			& .popup-fast-view__rating-text
+				font-weight: 500
+				font-size: 14px
+				line-height: 20px
+				margin-left: 10px
+			& .product-page__compare
+				margin-left: 40px
+			& .product-page__articul
+				margin-left: auto
+			&.loading
+				& .anim
+					position: relative
+					&:after
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						z-index: 8
+						background-color: var(--white)
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						z-index: 9
+						border-radius: 10px
+						background: linear-gradient(to right, #808080, #949494, #a9a9a9, #bdbebd, #e9e9e9)
+						animation: slide 2s infinite linear
+				& .anim-hidden
+					display: none
 
-
+@keyframes slide
+	0%
+		opacity: .5
+	50%
+		opacity: .1
+	100%
+		opacity: .5
 .sms-code
 	width: 248px
 	display: flex
