@@ -66,4 +66,23 @@ catsList.forEach(cat => {
 	})
 })
 
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const mobSearchToggle = document.getElementById('mobSearchToggle');
+const mobSearch = document.getElementById('mobSearch');
+
+searchInput.onfocus = function() {
+	searchResults.classList.add('active')
+}
+searchInput.onblur = function() {
+	searchResults.classList.remove('active')
+}
+mobSearchToggle.addEventListener('click', function() {
+	if(mobSearch.classList.contains('active-mob')) {
+		mobSearch.classList.remove('active-mob')
+	} else {
+		mobSearch.classList.add('active-mob')
+	}
+})
 }

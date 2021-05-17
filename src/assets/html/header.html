@@ -1,5 +1,5 @@
 <header class="header" id="header">
-		<div class="header__top header-top">
+		<div class="header__top header-top" id="mobSearch">
 			<div class="fix-box">
 				<div class="header-top__logo-box">
 					<img src="assets/img/header__logo.svg" alt="" class="header-top__logo">
@@ -21,7 +21,7 @@
 				<form class="header-top__search-box">
 					<fieldset class="header-top__search-fieldset">
 						<label class="header-top__search-label">
-							<input type="text" class="header-top__search-input" placeholder="Поиск...">
+							<input id="searchInput" type="text" class="header-top__search-input" placeholder="Поиск..." autocomplete="off">
 						</label>
 						<button type="submit" class="header-top__search-reset">
 							<img src="assets/img/header-search-close.svg" alt="" class="header-top__search-reset-icon">
@@ -30,6 +30,80 @@
 							<img src="assets/img/search-icon.svg" alt="" class="header-top__search-submit-icon">
 						</button>
 					</fieldset>
+					<div class="search-results" id="searchResults">
+						<div class="search-results__links">
+							<a href="#" class="search-results__links-item">
+								<span class="green-color">Люст</span>ра
+							</a>
+							<a href="#" class="search-results__links-item">
+								Цоколь для <span class="green-color">люст</span>р
+							</a>
+							<a href="#" class="search-results__links-item">
+								Потолочная <span class="green-color">люст</span>ра
+							</a>
+							<a href="#" class="search-results__links-item">
+								<span class="green-color">Люст</span>ры и бра
+							</a>
+						</div>
+						<div class="search-results__products">
+							<h2 class="search-results__products-title">
+								Подходящие товары
+							</h2>
+							<div class="search-results__products-list">
+								<a href="#" class="search-results__product">
+									<img src="assets/img/prod-card_01.png" alt="" class="search-results__product-ph">
+									<div class="search-results__product-txt">
+										<h3 class="search-results__product-name">
+											Потолочная люстра Noолочная люстра Noолочная люстра
+										</h3>
+										<div class="search-results__product-price">
+											<span class="search-results__product-price-currrent">
+												8 498 ₽
+											</span>
+											<span class="search-results__product-price-old">
+												11 850 ₽
+											</span>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="search-results__product">
+									<img src="assets/img/prod-card_01.png" alt="" class="search-results__product-ph">
+									<div class="search-results__product-txt">
+										<h3 class="search-results__product-name">
+											Потолочная люстра Noолочная люстра Noолочная люстра
+										</h3>
+										<div class="search-results__product-price">
+											<span class="search-results__product-price-currrent">
+												8 498 ₽
+											</span>
+											<span class="search-results__product-price-old">
+												11 850 ₽
+											</span>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="search-results__product">
+									<img src="assets/img/prod-card_01.png" alt="" class="search-results__product-ph">
+									<div class="search-results__product-txt">
+										<h3 class="search-results__product-name">
+											Потолочная люстра Noолочная люстра Noолочная люстра
+										</h3>
+										<div class="search-results__product-price">
+											<span class="search-results__product-price-currrent">
+												8 498 ₽
+											</span>
+											<span class="search-results__product-price-old">
+												11 850 ₽
+											</span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<a href="#" class="search-results__all green-color">
+							Все результаты поиска
+						</a>
+					</div>
 				</form>
 				<ul class="header-top__links">
 					<li class="header-top__links-li">
@@ -1591,7 +1665,7 @@
 				<div class="header-bottom__logo-box">
 					<img src="assets/img/heade-logo_white.svg" alt="" class="header-bottom__logo-ph">
 				</div>
-				<button class="header-bottom__search-btn">
+				<button class="header-bottom__search-btn" id="mobSearchToggle">
 					<img src="assets/img/search-icon.svg" alt="" class="header-bottom__search-icon">
 				</button>
 				<!-- <label class="header-bottom__search-box header-bottom-search">

@@ -994,6 +994,7 @@ label.label-radio span {
     position: absolute;
     top: 50%;
     left: calc(50% + 20px);
+    z-index: 10;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1003,6 +1004,23 @@ label.label-radio span {
   .header-top .header-top__links,
   .header-top .header-top__tel {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-top {
+    width: 290px;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: calc(100% + 10px);
+    left: 50%;
+    background-color: var(--white);
+    z-index: 10;
+    display: none;
+  }
+  .header-top.active-mob {
+    display: block;
   }
 }
 
@@ -1063,6 +1081,10 @@ label.label-radio span {
      object-fit: contain;
 }
 
+.header-top__search-box {
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .header-top__search-box {
     width: 322px;
@@ -1082,6 +1104,125 @@ label.label-radio span {
     border-radius: 5px;
     position: relative;
   }
+}
+
+.header-top__search-box .search-results {
+  padding: 15px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-top__search-box .search-results {
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.header-top__search-box .search-results.active {
+  display: block;
+}
+
+.header-top__search-box .search-results__links {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--black10);
+}
+
+.header-top__search-box .search-results__links-item {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.header-top__search-box .search-results__links-item + .search-results__links-item {
+  margin-top: 15px;
+}
+
+.header-top__search-box .search-results__products-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.header-top__search-box .search-results__product {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-top__search-box .search-results__product:last-child {
+  display: none;
+}
+
+.header-top__search-box .search-results__product + .search-results__product {
+  margin-top: 15px;
+}
+
+.header-top__search-box .search-results__product-ph {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header-top__search-box .search-results__product-txt {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-top__search-box .search-results__product-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header-top__search-box .search-results__product-price-currrent {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.header-top__search-box .search-results__product-price-old {
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--black50);
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.header-top__search-box .search-results__all {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+.header-top__search-fieldset {
+  border-bottom: 1px solid var(--black10);
 }
 
 .header-top__search-label {
@@ -1117,15 +1258,25 @@ label.label-radio span {
   }
 }
 
+@media (max-width: 767px) {
+  .header-top__search-input {
+    color: var(--black);
+  }
+}
+
 .header-top__search-reset {
   width: 12px;
   height: 12px;
   position: absolute;
   right: 60px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 14px;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .header-top__search-reset {
+    display: block;
+  }
 }
 
 .header-top__search-reset-icon {
@@ -1176,11 +1327,8 @@ label.label-radio span {
     background-color: var(--green);
     border-radius: 5px;
     position: absolute;
-    top: 50%;
+    top: -2px;
     right: 0;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
   }
 }
 
