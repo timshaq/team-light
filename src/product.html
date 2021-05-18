@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="assets/lib/lightgallery/css/lightgallery.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 </head>
 
@@ -51,13 +52,25 @@
 			<div class="product-page__prod-info prod-info">
 				<div class="prod-info__slider">
 					<div class="swiper-container" id="productPageLarge">
-						<div class="swiper-wrapper">
-							<img src="assets/img/category-card__ph_02.png" class="swiper-slide">
-							<img src="assets/img/category-card__ph_03.png" class="swiper-slide">
-							<img src="assets/img/category-card__ph_04.png" class="swiper-slide">
-							<img src="assets/img/category-card__ph_05.png" class="swiper-slide">
-							<img src="assets/img/category-card__ph_06.png" class="swiper-slide">
-							<img src="assets/img/category-card__ph_07.png" class="swiper-slide">
+						<div class="swiper-wrapper" id="lightgallery">
+							<a href="assets/img/category-card__ph_02.png" class="swiper-slide">
+								<img src="assets/img/category-card__ph_02.png">
+							</a>
+							<a href="assets/img/category-card__ph_03.png" class="swiper-slide">
+								<img src="assets/img/category-card__ph_03.png">
+							</a>
+							<a href="assets/img/category-card__ph_04.png" class="swiper-slide">
+								<img src="assets/img/category-card__ph_04.png">
+							</a>
+							<a href="assets/img/category-card__ph_05.png" class="swiper-slide">
+								<img src="assets/img/category-card__ph_05.png">
+							</a>
+							<a href="assets/img/category-card__ph_06.png" class="swiper-slide">
+								<img src="assets/img/category-card__ph_06.png">
+							</a>
+							<a href="assets/img/category-card__ph_07.png" class="swiper-slide">
+								<img src="assets/img/category-card__ph_07.png">
+							</a>
 						</div>
 						<div class="swiper-pagination" id="productPageLargePagination"></div>
 					</div>
@@ -2580,6 +2593,9 @@
 </div>
 
 </main>
+<script src="assets/lib/lightgallery/js/lightgallery.min.js"></script>
+<script src="assets/lib/lightgallery/js/lg-thumbnail.min.js"></script>
+<script src="assets/lib/lightgallery/js/lg-fullscreen.min.js"></script>
 
 @@include('assets/html/footer.html')
 

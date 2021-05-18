@@ -15,7 +15,7 @@ import headerCatalogModal from './headerCatalogModal.js';
 import dragToScroll from './dragToScroll.js';
 import smsCodeInputs from './smsCodeInputs.js';
 import headerActions from './header.js';
-
+import prodGallery from './prodGallery.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -36,5 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	dragToScroll();
 	smsCodeInputs();
 	headerActions();
+	prodGallery();
 
 });

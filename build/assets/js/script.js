@@ -42,7 +42,7 @@
     return n.d(t, "a", t), t;
   }, n.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 15);
+  }, n.p = "", n(n.s = 16);
 }([function (e, t, n) {
   "use strict";
 
@@ -136,25 +136,25 @@
     });
     const c = document.getElementById("catalogFilter"),
           o = document.getElementById("catalogOpenFilterBtn"),
-          r = document.getElementById("catalogFilterClose");
+          i = document.getElementById("catalogFilterClose");
     o.addEventListener("click", function (e) {
       e.preventDefault(), n(c);
-    }), r.addEventListener("click", function (e) {
+    }), i.addEventListener("click", function (e) {
       e.preventDefault(), t(c);
     }), c.addEventListener("click", function (e) {
       e.target === this && t(c);
     });
-    const i = document.querySelectorAll(".price-slider");
-    Array.prototype.slice.call(i).forEach(e => {
+    const r = document.querySelectorAll(".price-slider");
+    Array.prototype.slice.call(r).forEach(e => {
       var t = e,
           n = [e.querySelector(".slider-input1"), e.querySelector(".slider-input2")],
           c = parseInt(e.getAttribute("data-min")),
           o = parseInt(e.getAttribute("data-max")),
-          r = 10 * o / 100,
-          i = 90 * o / 100,
-          s = e.getAttribute("data-symbol");
+          i = 10 * o / 100,
+          r = 90 * o / 100,
+          l = e.getAttribute("data-symbol");
       noUiSlider.create(t, {
-        start: [r, i],
+        start: [i, r],
         connect: [!1, !0, !1],
         range: {
           min: [c],
@@ -162,10 +162,10 @@
         },
         format: {
           to: function (e) {
-            return Math.ceil(e) + " " + s;
+            return Math.ceil(e) + " " + l;
           },
           from: function (e) {
-            return e.replace(" " + s, "");
+            return e.replace(" " + l, "");
           }
         }
       }), t.noUiSlider.on("update", function (e, t) {
@@ -216,36 +216,36 @@
           c = document.getElementById("catalogOpenBtn"),
           o = document.getElementById("catalogContent");
 
-    function r(e) {
+    function i(e) {
       e.classList.remove("mob-active"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
     }
 
-    function i(e) {
+    function r(e) {
       e.classList.add("mob-active"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
     }
 
     e.addEventListener("click", function () {
-      i(n);
-    }), t.addEventListener("click", function () {
       r(n);
+    }), t.addEventListener("click", function () {
+      i(n);
     }), n.addEventListener("click", function (e) {
-      e.target === this && r(n);
+      e.target === this && i(n);
     }), c.addEventListener("click", function (e) {
       window.innerWidth > 1199 || (e.preventDefault(), c.classList.contains("back") ? (c.classList.remove("back"), o.classList.remove("mob-active")) : (c.classList.add("back"), o.classList.add("mob-active")));
     });
-    const s = document.querySelectorAll(".catalog-modal__category");
-    Array.prototype.slice.call(s).forEach(e => {
+    const l = document.querySelectorAll(".catalog-modal__category");
+    Array.prototype.slice.call(l).forEach(e => {
       e.addEventListener("click", function (t) {
         window.innerWidth > 1199 || (t.preventDefault(), e.classList.contains("mob-open") ? e.classList.remove("mob-open") : e.classList.add("mob-open"));
       });
     });
-    const l = document.getElementById("searchInput"),
+    const s = document.getElementById("searchInput"),
           a = document.getElementById("searchResults"),
           d = document.getElementById("mobSearchToggle"),
           u = document.getElementById("mobSearch");
-    l.onfocus = function () {
+    s.onfocus = function () {
       a.classList.add("active");
-    }, l.onblur = function () {
+    }, s.onblur = function () {
       a.classList.remove("active");
     }, d.addEventListener("click", function () {
       u.classList.contains("active-mob") ? u.classList.remove("active-mob") : u.classList.add("active-mob");
@@ -299,6 +299,18 @@
   "use strict";
 
   n.r(t), t.default = function () {
+    const e = document.getElementById("lightgallery");
+    e && lightGallery(e, {
+      download: !1,
+      thumbnail: !0,
+      speed: 400,
+      mousewheel: !0
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t.default = function () {
     var e = new Swiper("#productPageThumbNail", {
       loop: !0,
       spaceBetween: 15,
@@ -336,21 +348,21 @@
       t.forEach(e => e.classList.remove("active"));
     }
 
-    function r() {
+    function i() {
       c.forEach(e => e.classList.remove("open"));
     }
 
     t.forEach((e, t) => {
       e.addEventListener("click", function () {
         const n = c[t];
-        n.classList.contains("open") || (r(), o(), e.classList.add("active"), n.classList.add("open"));
+        n.classList.contains("open") || (i(), o(), e.classList.add("active"), n.classList.add("open"));
       });
     });
-    const i = document.querySelectorAll(".product-page .product-drop-down__header");
-    Array.prototype.slice.call(i).forEach((e, n) => {
+    const r = document.querySelectorAll(".product-page .product-drop-down__header");
+    Array.prototype.slice.call(r).forEach((e, n) => {
       e.addEventListener("click", function () {
-        const i = c[n];
-        i.classList.contains("open") || (r(), o(), t[n].classList.add("active"), i.classList.add("open"), html.scrollTo({
+        const r = c[n];
+        r.classList.contains("open") || (i(), o(), t[n].classList.add("active"), r.classList.add("open"), html.scrollTo({
           top: e.offsetTop,
           behavior: "smooth"
         }));
@@ -509,35 +521,36 @@
       e.addEventListener("keyup", function (c) {
         if (69 === c.which) return e.value = "";
         let o = e.value,
-            r = o.length;
+            i = o.length;
         if (8 === c.which && t[n - 1]) return t[n - 1].focus();
-        1 === r ? (e.value = o.substr(0, 1), t[n + 1] && t[n + 1].focus()) : t[n + 1] && 8 != c.which ? (e.value = o.substr(0, 1), t[n + 1].focus(), t[n + 1].value = o.substr(1, 1)) : r > 1 && !t[n + 1] && (e.value = o.substr(0, 1));
+        1 === i ? (e.value = o.substr(0, 1), t[n + 1] && t[n + 1].focus()) : t[n + 1] && 8 != c.which ? (e.value = o.substr(0, 1), t[n + 1].focus(), t[n + 1].value = o.substr(1, 1)) : i > 1 && !t[n + 1] && (e.value = o.substr(0, 1));
       });
     });
   };
 }, function (e, t, n) {
-  n(0), n(1), n(2), n(3), n(4), n(5), n(6), n(7), n(8), n(9), n(10), n(11), n(16), n(12), n(14), e.exports = n(13);
+  n(0), n(1), n(2), n(3), n(4), n(5), n(6), n(7), n(8), n(9), n(10), n(11), n(12), n(17), n(13), n(15), e.exports = n(14);
 }, function (e, t, n) {
   "use strict";
 
   n.r(t);
-  var c = n(12),
+  var c = n(13),
       o = n(0),
-      r = n(11),
-      i = n(3),
-      s = n(13),
-      l = n(1),
+      i = n(12),
+      r = n(3),
+      l = n(14),
+      s = n(1),
       a = n(2),
       d = n(8),
       u = n(4),
-      f = n(10),
-      p = n(9),
+      f = n(11),
+      p = n(10),
       m = n(7),
       v = n(5),
-      y = n(14),
-      g = n(6);
+      y = n(15),
+      g = n(6),
+      w = n(9);
   document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("header");
-    Object(c.default)(), Object(o.default)(), Object(r.default)(), Object(d.default)(), Object(s.default)(), Object(l.default)(), Object(a.default)(), Object(i.default)(), Object(u.default)(), Object(f.default)(), Object(p.default)(), Object(m.default)(), Object(v.default)(), Object(y.default)(), Object(g.default)();
+    Object(c.default)(), Object(o.default)(), Object(i.default)(), Object(d.default)(), Object(l.default)(), Object(s.default)(), Object(a.default)(), Object(r.default)(), Object(u.default)(), Object(f.default)(), Object(p.default)(), Object(m.default)(), Object(v.default)(), Object(y.default)(), Object(g.default)(), Object(w.default)();
   });
 }]);
